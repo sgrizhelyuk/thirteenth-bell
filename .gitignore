@@ -1,0 +1,10 @@
+__pycache__/
+*.pyc
+*.log
+Thumbs.db
+desktop.ini
+_shot.html
+assets/_versions/generated_raw/
+assets/_versions/pre_manual/
+assets/_versions/new_sources/
+assets/_versions/manual/

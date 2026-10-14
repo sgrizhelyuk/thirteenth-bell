@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Thirteenth Bell — mystical horror English quest</title>
+<link rel="icon" href="assets/UI_logo_emblem.png">
+<link rel="stylesheet" href="style.css?v=1">
+</head>
+<body>
+
+<!-- ===== Title screen ===== -->
+<section id="titleScreen" class="screen">
+  <img class="bg-img" src="assets/SC_title.png" alt="">
+  <div class="title-overlay">
+    <h1>The Thirteenth Bell</h1>
+    <p class="subtitle">A mystical horror English quest · Level A2–B1</p>
+    <div class="title-buttons">
+      <button id="btnStart" class="big-btn">Start the story</button>
+      <button id="btnContinue" class="big-btn ghost" hidden>Continue</button>
+      <button id="btnAbout" class="big-btn ghost">How to play</button>
+    </div>
+    <p class="credits">Prototype · generated art + hand-written script · music: Kevin MacLeod (incompetech.com, CC BY 4.0)</p>
+  </div>
+</section>
+
+<!-- ===== Game screen ===== -->
+<section id="gameScreen" class="screen" hidden>
+  <div id="bgLayer">
+    <img id="bg" alt="">
+    <div id="hotspots"></div>
+  </div>
+  <div id="sprites"></div>
+
+  <header id="topbar">
+    <button id="btnHome" class="icon-btn" title="Back to title">
+      <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3 2 12h3v8h6v-5h2v5h6v-8h3z"/></svg>
+    </button>
+    <div id="chapterLabel"></div>
+    <div class="topbar-right">
+      <button id="btnMusic" class="icon-btn" title="Music on/off">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 3v10.55A4 4 0 1 0 14 17V7h4V3h-6z"/></svg>
+      </button>
+      <button id="btnNotebook" class="icon-btn" title="Detective notebook">
+        <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M6 2h11a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zm1 3v2h8V5H7zm0 4v2h8V9H7zm0 4v2h5v-2H7z"/></svg>
+      </button>
+      <button id="btnWatsonTop" class="icon-btn img-btn" title="Ash's hint">
+        <img src="assets/UI_ash_hint.png" alt="Hints">
+      </button>
+      <button id="btnLang" class="icon-btn img-btn" title="Show Russian translation">
+        <img src="assets/UI_translate_button.png" alt="Translate">
+      </button>
+    </div>
+  </header>
+
+  <div id="chapterCard"></div>
+
+  <div id="choices"></div>
+
+  <div id="dialogue" hidden>
+    <div id="nameplate" hidden></div>
+    <p id="lineText" class="line"></p>
+    <p id="lineRu" class="ru-line" hidden></p>
+    <button id="btnNext" title="Next" hidden>&#9660;</button>
+  </div>
+
+  <div id="watsonPopup" class="modal" hidden>
+    <div class="modal-card watson-card">
+      <img src="assets/UI_ash_hint.png" alt="Ash">
+      <div>
+        <h3>Ash says</h3>
+        <p id="watsonText"></p>
+      </div>
+      <button id="watsonClose" class="big-btn small">Got it</button>
+    </div>
+  </div>
+
+  <div id="notebookPanel" class="side-panel" hidden>
+    <div class="side-head">
+      <h2>Detective Notebook</h2>
+      <button id="notebookClose" class="big-btn small">Close</button>
+    </div>
+    <div id="notebookBody"></div>
+  </div>
+
+  <div id="taskPanel" class="modal" hidden>
+    <div class="modal-card task-card">
+      <h3 id="taskTitle"></h3>
+      <p class="task-hint" id="taskHint"></p>
+      <div id="taskBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" hidden></div>
+</section>
+
+<!-- ===== End screen ===== -->
+<section id="endScreen" class="screen" hidden>
+  <img class="bg-img" src="assets/BG_causeway_dawn.png" alt="">
+  <div class="end-overlay">
+    <h1>The Long Night Is Over</h1>
+    <p class="subtitle">You broke the debt and kept your voice.</p>
+    <div id="endBadges" class="badges"></div>
+    <div class="title-buttons">
+      <button id="btnRestart" class="big-btn">Play again</button>
+      <button id="btnEndTitle" class="big-btn ghost">Title screen</button>
+    </div>
+  </div>
+</section>
+
+<!-- About modal (title screen) -->
+<div id="aboutModal" class="modal" hidden>
+  <div class="modal-card">
+    <h3>How to play</h3>
+    <p>Read the dialogue and choose the best answer. If you make a mistake, Ash the cat nudges you and explains the rule — and you can try again.</p>
+    <p>In clue scenes, move the magnifying glass over the picture and click on suspicious things.</p>
+    <p>The notebook keeps your clues. The globe button shows the Russian translation of the current line.</p>
+    <p class="ru">Читай диалоги и выбирай лучший ответ. Кот Эш подскажет правило — попробовать можно снова. В сценах поиска кликай по подозрительным местам. Блокнот хранит улики, кнопка с глобусом — перевод.</p>
+    <button id="btnAboutClose" class="big-btn small">Got it</button>
+  </div>
+</div>
+
+<script src="js/story.js?v=1"></script>
+<script src="js/app.js?v=1"></script>
+</body>
+</html>
