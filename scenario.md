@@ -61,12 +61,12 @@
 
 | Тема | Где | Как отрабатывается |
 |---|---|---|
-| Word order (императивы/правила) | Гл.1, 3, 7 | задание «Put the words in order» ×4 |
+| Word order (императивы/правила) | Гл.1, 3, 5, 6, 7, 8 | задание «Put the words in order» ×6 |
 | **must / mustn't / have to** | Гл.1, 3, 7, 8 | quiz + rules-фразы |
 | **Present Perfect** (just/already/never, gone/left) | Гл.2, 5, 6, эпилог | quiz, tf, реплики (мотив «что уже случилось?») |
 | Prepositions of place | Гл.4 | quiz ×3 после поиска улик |
 | **First Conditional** | Гл.6, 7, 8 | quiz ×2 + order |
-| True/False | Пролог, 2, 5, 6, 7 | 5 заданий |
+| True/False | Пролог, 2, 4, 5, 6, 7 | 6 заданий |
 | Multi-choice (улики) | Гл.8 | «выбери три улики» |
 | Vocabulary | каждая сцена | мини-словарь 5–6 слов |
 
@@ -78,7 +78,7 @@
 *Objective:* Survive the crossing and remember the driver's warning. / *Пережить переправу и запомнить предупреждение водителя.*
 *BG:* coach on the flooded causeway, night / *Music:* dread-lite
 
-1. `[nar]` "The coach rocks in the wind. Rain freezes on the windows. Outside, black water is already licking at the road." — «Экипаж качает ветром. Дождь замерзает на окнах. Снаружи чёрная вода уже лижет дорогу.»
+1. `[nar]` "The coach rocks in the wind. Rain freezes on the windows. Outside, black water is already licking at the road." — «Экипаж качается на ветру. Дождь замерзает на окнах. Снаружи чёрная вода уже лижет дорогу.»
 2. `[Pike]` "Last crossing tonight. Mind the tide, kid." — «Последний рейс на сегодня. Следи за приливом, малыш.»
 3. `[Nora]` "I have a letter. Winterhollow Academy." — «У меня письмо. Академия Уинтерхоллоу.»
 4. `[choice|Pike]` "There is no good hour to arrive there. Tell me — do you believe in warnings?"
@@ -86,7 +86,7 @@
    - ✗ "I don't believe in old stories." — «Я не верю в старые истории.» · fb: "Brave words. On this road, brave is expensive."
    - ✗ "Warnings are for children." — «Предупреждения — для детей.» · fb: "Then remember this one like a child: the bell rings thirteen times here."
 5. `[Pike]` "When the bell rings thirteen, close your eyes and do not answer." — «Когда колокол ударит тринадцать раз — закрой глаза и не отвечай.»
-6. `[Nora]` "Thirteen? A bell rings twelve." — «Тринадцать? Колокол звонит двенадцать.»
+6. `[Nora]` "Thirteen? A bell rings twelve." — «Тринадцать? Колокол звонит двенадцать раз.»
 7. `[Pike]` "Not this bell. And if you hear your name tonight — it is not me calling." — «Не этот колокол. И если услышишь своё имя сегодня — это не я зову.»
 8. `[task|tf]` True or False?
    - "The road floods at high tide." — true
@@ -105,7 +105,7 @@
 4. `[Crane]` "The school knows. The school writes the letters." — «Школа знает. Школа пишет письма.»
 5. `[choice|Crane]` "Before you step through: do you know our rules?"
    - ✓ "No, sir. Please, tell me the rules." — «Нет, сэр. Пожалуйста, расскажите мне правила.» · fb: "Polite and honest. Good start."
-   - ✗ "Rules are boring." — «Правила — скучные.» · fb: "Wrong tone. And 'boring' is a dangerous word here."
+   - ✗ "Rules are boring." — «Правила — это скучно.» · fb: "Wrong tone. And 'boring' is a dangerous word here."
    - ✗ "I can learn them tomorrow." — «Я могу выучить их завтра.» · fb: "Some rules have to be learned tonight. Note 'have to'."
 6. `[Crane]` "Five rules. Learn them by heart." — «Пять правил. Выучи их наизусть.»
 7. `[Crane]` "One: after the last bell, the doors stay closed." — «Первое: после последнего колокола двери остаются закрытыми.»
@@ -130,20 +130,20 @@
 1. `[nar]` "Your room is at the end of the west corridor. The brass number says 13. The girl inside is awake, pretending not to be." — «Твоя комната в конце западного коридора. Латунная цифра на двери — 13. Девочка внутри не спит и делает вид, что спит.»
 2. `[June]` "You are the new one. Nora Bell. Here everyone is called by their full name. Like a list." — «Ты новенькая. Нора Белл. Здесь всех зовут полным именем. Как список.»
 3. `[Nora]` "You waited up for me." — «Ты меня дождалась.»
-4. `[June]` "I count every night now. Old habit of this room." — «Теперь я считаю каждый вечер. Старая привычка этой комнаты.»
+4. `[June]` "I count every night now. Old habit of this room." — «Теперь я считаю каждую ночь. Старая привычка этой комнаты.»
 5. `[choice|June]` "Quick — what did Crane tell you at the gate?"
    - ✓ "Five rules. I remember all of them." — «Пять правил. Я помню все.» · fb: "Good. Here, memory is a life skill."
    - ✗ "He told me a lot of strange stories." — «Он рассказал мне много странных историй.» · fb: "Crane talks? Then you have heard more than most."
    - ✗ "Nothing important." — «Ничего важного.» · fb: "Here, 'important' means something different."
 6. `[June]` "Lena lived here before you. She has left her diary, her lamp, her winter coat. People who leave take their things." — «До тебя здесь жила Лена. Она оставила дневник, лампу, зимнее пальто. Кто уезжает — забирает свои вещи.»
 7. `[Nora]` "Where has she gone?" — «Куда она уехала?»
-8. `[June]` "The letter says she has moved to a school in the south. The letter came two days after she was gone." — «В письме сказано, что она перешла в школу на юге. Письмо пришло через два дня после того, как она исчезла.»
+8. `[June]` "The letter says she has moved to a school in the south. The letter came two days after she was gone." — «В письме сказано, что она перевелась в школу на юге. Письмо пришло через два дня после того, как она исчезла.»
 9. `[task|quiz]` "She ___ her diary in the room." — "has left" ✓ / "have left" / "has leaved"
 10. `[task|quiz]` "The letter ___ two days later." — "came" ✓ / "has come" / "comes"
 11. `[task|tf]` True or False?
     - "June believes the letter about Lena." — false
     - "Lena left her winter coat." — true
-12. `[nar]` "Outside, snow taps the window. For one second the tapping sounds like ten small fingers." — «Снаружи снег стучит в окно. Одно мгновение стук похож на десять маленьких пальцев.»
+12. `[nar]` "Outside, snow taps the window. For one second the tapping sounds like ten small fingers." — «Снаружи снег стучит в окно. На секунду этот стук похож на десять маленьких пальцев.»
 13. `[vocab]` roommate — соседка по комнате; count — считать; leave/left — оставить/уехать; moved — переехала; coat — пальто; two days later — через два дня.
 
 ### Chapter 3 — Paper and Wax
@@ -152,7 +152,7 @@
 *Cast:* Nora (left), Vale (right)
 
 1. `[nar]` "The office smells of cold paper and old wax. The fire is burning, but the room is not warm." — «Кабинет пахнет холодной бумагой и старым воском. Огонь горит, но в комнате не тепло.»
-2. `[Vale]` "Miss Bell. My condolences on your family. A scholarship at this hour of the year is unusual." — «Мисс Белл. Мои соболезнования по поводу вашей семьи. Стипендия в такое время года — необычно.»
+2. `[Vale]` "Miss Bell. My condolences on your loss. A scholarship at this hour of the year is unusual." — «Мисс Белл. Примите мои соболезнования. Стипендия в такое время года — необычно.»
 3. `[Vale]` "You will find that Winterhollow has five rules and one hundred and one rituals. You may forget the rituals." — «Вы обнаружите, что в Уинтерхоллоу пять правил и сто один ритуал. Ритуалы можете забыть.»
 4. `[Nora]` "And the rules?" — «А правила?»
 5. `[Vale]` "Rules are paid for, Miss Bell. Every rule here costs something." — «За правила платят, мисс Белл. Каждое правило здесь чего-то стоит.»
@@ -177,11 +177,12 @@
 
 1. `[nar]` "June takes you to the east wing after tea. 'Lena's classroom,' she whispers. 'Mind the third stair.'" — «После чая Джун ведёт тебя в восточное крыло. «Класс Лены, — шепчет она. — Осторожно, третья ступенька.»»
 2. `[June]` "Her desk, her chalk, her secret places. Look — and keep your voice down." — «Её парта, её мел, её тайные места. Смотри — и не повышай голос.»
-3. `[clues|hotspots]` Magnifying-glass search (4 zones):
+3. `[clues|hotspots]` Magnifying-glass search (3 clue-зоны + 2 flavor-зоны):
    - **diary_page** — in the desk: "They count us, June. Tell no one. — L."
    - **tally_marks** — chalk marks behind the wardrobe: rows and rows of small lines
    - **old_key** — a small iron key sewn inside the padding of a winter coat on the hook
    - **cold_spot** — a patch by the window where your breath turns to frost (flavor, not a clue)
+   - **desks** — parты под пылью (flavor, not a clue)
 4. `[nar]` "You have found three small things. Each one is heavier than the last." — «Ты нашла три маленькие вещи. Каждая тяжелее предыдущей.»
 5. `[task|quiz]` "The tally marks are ___ the wardrobe." — "behind" ✓ / "on" / "in"
 6. `[task|quiz]` "The key was ___ the coat." — "inside" ✓ / "above" / "between"
@@ -204,8 +205,8 @@
    - ✓ "What happens on the night of the Long Bell?" — «Что происходит в ночь Долгого Колокола?» · fb: "She puts salt in your pocket. 'The bell takes a voice. One voice. Every winter.'"
    - ✗ "Is there a ghost in the tower?" — «В башне есть призрак?» · fb: "Ghost? No. A guest. And guests must be answered."
    - ✗ "When is the next ferry?" — «Когда следующий паром?» · fb: "Spring, child. If you are still on the list." (note the silent 'if')
-6. `[note|clue=salt_pouch]` "She fills a little cloth bag with salt and ties it tight. 'Salt at the door. Salt in your pocket. Salt in your boot if the wind is wrong.'" — «Она насыпает соль в мешочек и крепко завязывает. «Соль у двери. Соль в кармане. Соль в ботинке, если ветер не тот.»
-7. `[nar]` "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth." — «Серый кот подходит и прижимается лапой к твоей руке. Ошейник — старая кожа. Латунная пластинка почти стёрта.»
+6. `[note|clue=salt_pouch]` "She fills a little cloth bag with salt and ties it tight. 'Salt at the door. Salt in your pocket. Salt in your boot if the wind is wrong.'" — «Она насыпает соль в мешочек и крепко завязывает: «Соль у двери. Соль в кармане. Соль в ботинке, если ветер не тот.»
+7. `[nar]` "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth." — «Серый кот подходит и прижимает лапу к твоей руке. Ошейник — старая кожа. Латунная пластинка почти стёрта.»
 8. `[task|quiz]` "I ___ just baked the bread for tomorrow." — "have" ✓ / "has" / "am"
 9. `[task|tf]` True or False?
    - "Mrs. Poole has worked here for forty years." — true
@@ -219,14 +220,14 @@
 *Cast:* Nora (left), Quill (right)
 
 1. `[nar]` "The archive is one locked room behind another locked room. Mr. Quill unlocks them both with hands that shake." — «Архив — это одна запертая комната за другой запертой комнатой. Мистер Куилл отпирает обе дрожащими руками.»
-2. `[Quill]` "You are the Bell girl. I have already polished your file." — «Ты девочка-Белл. Я уже протёр пыль с твоего дела.»
+2. `[Quill]` "You are the Bell girl. I have already polished your file." — «Ты — та самая Белл. Я уже протёр пыль с твоей карточки.»
 3. `[Nora]` "I want to see the school ledger." — «Я хочу увидеть школьную книгу записей.»
-4. `[Quill]` "The ledger shows who came and who left. It does not show where. If you read it aloud, the school will hear you." — «Книга показывает, кто пришёл и кто ушёл. Она не показывает куда. Если прочтёшь вслух — школа услышит.»
+4. `[Quill]` "The ledger shows who came and who left. It does not show where. If you read it aloud, the school will hear you." — «Книга показывает, кто пришёл и кто ушёл. Она не показывает куда. Если прочтёшь её вслух — школа услышит тебя.»
 5. `[choice|Quill]` "Why do you want the old book, Miss Bell?"
    - ✓ "I need the truth. People are missing." — «Мне нужна правда. Люди пропадают.» · fb: "'Missing' — good word. Sharp and quiet. He opens the ledger."
    - ✗ "I want to see my name." — «Я хочу увидеть своё имя.» · fb: "You have just said something dangerous."
-   - ✗ "June told me to." — «Джун сказала.» · fb: "Never put your friend's name in a dark room."
-6. `[note|clue=ledger_page]` "The last page is yesterday's ink: 'N. Bell — voce.' A line above it: 'L. Marsh — transferred.' An older line, in different ink: 'Wren — taken.'" — «Последняя страница — вчерашние чернила: «Н. Белл — voce». Строкой выше: «Л. Марш — переведена». Старая строка, другими чернилами: «Крапивник — забрана».»
+   - ✗ "June told me to." — «Джун попросила меня.» · fb: "Never put your friend's name in a dark room."
+6. `[note|clue=ledger_page]` "The last page is yesterday's ink: 'N. Bell — voce.' A line above it: 'L. Marsh — transferred.' An older line, in different ink: 'Wren — taken.'" — «Последняя страница — вчерашние чернила: «Н. Белл — voce». Строкой выше: «Л. Марш — переведена». Старая строка, другими чернилами: «Рен — забрана».»
 7. `[Quill]` "If a name is written, the debt will find the voice." — «Если имя записано — долг найдёт голос.»
 8. `[task|quiz]` Choose the correct sentence:
    - "If the gate opens, we will run." ✓
@@ -244,10 +245,10 @@
 *Cast:* Nora (left), Ash (center, small)
 
 1. `[nar]` "At midnight the corridor is a river of cold. The cat looks at you once — then walks. You follow." — «В полночь коридор — река холода. Кот смотрит на тебя один раз — и идёт. Ты следуешь.»
-2. `[nar]` "Thirteen steps up. On the landing, the moon leans on the arrow slit. The bell rope has been cut. The bell still hangs above: immense and quiet." — «Тринадцать ступеней вверх. На площадке луна облокотилась на бойницу. Верёвка колокола перерезана. Сам колокол висит выше: огромный и тихий.»
-3. `[nar]` "By a hook on the wall hangs a child's coat, tiny against the stone. A name is sewn inside: Wren." — «На крюке у стены висит детское пальто — крошечное у камня. Внутри вшито имя: Крапивник.»
-4. `[note|clue=cat_tag]` "Ash lets you read his tag at last: 'Wren'. The letters are worn almost smooth. He has waited a long time." — «Эш наконец даёт прочитать пластинку: «Крапивник». Буквы почти стёрты. Он ждёт очень давно.»
-5. `[nar]` "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. They do not move." — «Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Он не двигается.»
+2. `[nar]` "Thirteen steps up. On the landing, the moon leans on the arrow slit. The bell rope has been cut. The bell still hangs above: immense and quiet." — «Тринадцать ступеней вверх. На площадке луна оперлась на бойницу. Верёвка колокола перерезана. Сам колокол висит выше: огромный и тихий.»
+3. `[nar]` "By a hook on the wall hangs a child's coat, tiny against the stone. A name is sewn inside: Wren." — «На крюке у стены висит детское пальто — крошечное на фоне камня. Внутри вшито имя: Рен.»
+4. `[note|clue=cat_tag]` "Ash lets you read his tag at last: 'Wren'. The letters are worn almost smooth. He has waited a long time." — «Эш наконец даёт прочитать пластинку: «Рен». Буквы почти стёрты. Он ждёт очень давно.»
+5. `[nar|cast=Visitor]` "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move." — «Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается.» (силуэт Visitor справа; исчезает после верного выбора — dropChars)
 6. `[choice|Ash]` (Silence. The cat's ears turn. What do you do?)
    - ✓ "Hold your breath and stay still." — «Затаись и не двигайся.» · fb: "The best choices in this school are usually the quietest."
    - ✗ "Call out: 'Who is there?'" — «Крикни: «Кто там?»» · fb: "You called. Something heard you. Rule Two remembers."
@@ -278,7 +279,7 @@
    - tally_marks ✓
    - ledger_page ✓
    - salt_pouch / photo / cat_tag — distractors
-8. `[task|order]` "vale wrote my name in the old ledger ."
+8. `[task|order]` "Vale wrote my name in the old ledger ."
 9. `[task|quiz]` "If the bell rings thirteen times, ___." — "the gate will open" ✓ / "the gate opens tomorrow" / "the gate would open yesterday"
 10. `[nar]` "Nora says the words. Crane puts the old page into his lantern. The flame eats the ink — and the bell cracks, once, like ice. The cold breaks. In the sudden quiet, June is crying and laughing at the same time." — «Нора произносит слова. Крейн опускает старую страницу в фонарь. Пламя съедает чернила — и колокол трескается, один раз, как лёд. Холод отступает. В наступившей тишине Джун плачет и смеётся одновременно.»
 11. `[nar]` "Mr. Crane does not speak. He only bows his head — the bow of a man who has finally paid." — «Мистер Крейн не говорит. Он лишь склоняет голову — поклон человека, который наконец заплатил.»
@@ -287,17 +288,17 @@
 ### Epilogue — Spring Ferry
 *Objective:* Say goodbye — and understand what stayed behind. / *Попрощайся — и пойми, что осталось позади.*
 *BG:* causeway at dawn, melting ice / *Music:* dawn
-*Cast:* Nora (left), June (right), Ash (on the suitcase)
+*Cast:* Nora (left), June (right), Ash (center, small — «on the suitcase»)
 
-1. `[nar]` "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over — the quiet winter." — «На рассвете дамба — лента чёрной воды и тающего льда. Гудок парома летит над озером. Зима кончилась — тихая зима.»
+1. `[nar]` "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over — the quiet winter." — «На рассвете дамба — лента чёрной воды и тающего льда. Гудок парома летит над озером. Зима кончилась — наступила тихая зима.»
 2. `[June]` "You did it. You said the words." — «Ты сделала это. Ты сказала слова.»
 3. `[Crane]` (at the gate) — он молча поднимает фонарь. `[nar]` "Mr. Crane raises his lantern at the gate. He does not speak. He will not speak again — the bell, broken or not, has his voice. He waves. It is enough." — «Мистер Крейн поднимает фонарь у ворот. Он не говорит. Он больше не заговорит — колокол, сломанный или нет, забрал его голос. Он машет рукой. Этого достаточно.»
-4. `[nar]` "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be put down." — «Пальто Лены всё ещё висит в комнате 13. Некоторые вещи нельзя вернуть. Некоторые долги можно отменить.»
+4. `[nar]` "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be put down." — «Пальто Лены всё ещё висит в комнате 13. Некоторые вещи нельзя вернуть. Некоторые долги можно отпустить.»
 5. `[task|quiz]` Choose the true ending line:
    - "The bell has not rung since that night." ✓
    - "The bell did not rang since that night."
    - "The bell is not ringing yesterday."
-6. `[nar]` "Ash rides on your suitcase like a captain. In his collar, the old tag says Wren. Wherever you go, he will count one heartbeat more." — «Эш едет на твоём чемодане, как капитан. В его ошейнике старая пластинка: «Крапивник». Куда бы ты ни поехала — он будет рядом.» 
+6. `[nar]` "Ash rides on your suitcase like a captain. In his collar, the old tag says Wren. Wherever you go, he will count one heartbeat more." — «Эш едет на твоём чемодане, как капитан. В его ошейнике старая пластинка: «Рен». Куда бы ты ни поехала — он посчитает на одно биение сердца больше.» 
 7. `[nar]` "Months later, an envelope arrives with no stamp. Inside is one line: 'The bell remembers.'" — «Спустя месяцы приходит конверт без марки. Внутри одна строка: «Колокол помнит».»
 8. `[vocab]` dawn — рассвет; melting — тающий; horn — гудок; wave — махать; enough — достаточно; remembers — помнит.
 
@@ -325,22 +326,24 @@
 
 **UI:** базовый набор переиспользуется из первой игры (рамка диалога, кнопки, блокнот, лупа-курсор, бейджи) — перекрасить в холодный «серебро + стылая сталь», золото оставить только для безопасных тёплых мест (кухня).
 
-**Музыка (5 треков, один на группу глав):**
-| Главы | Настроение | Кандидаты (incompetech, CC BY) |
+**Музыка (7 треков, Kevin MacLeod — incompetech.com, CC BY 4.0):**
+| Сцены | Ключ | Трек / настроение |
 |---|---|---|
-| Пролог, Гл.1 | тревожное ожидание | "Ossuary", "Long Note One" |
-| Гл.2–4 | холодная неясность | "Darkest Child", "Anxiety" |
-| Гл.5 | тёплый фолк (кухня) | "Past the Edge", "Juniper" |
-| Гл.6–7 | сгущающееся напряжение | "Come Play with Me", "Ghost Story" |
-| Гл.8, эпилог | кульминация → рассвет | "Ice Demon" → "Frost Waltz" |
+| Пролог, Гл.1 | `dread` | Ossuary 1 — A Beginning · тёмное ожидание |
+| Гл.2–4 | `mystery` | Ghost Story · холодная неясность |
+| Гл.5 | `warm` | Errigal · тёплый фолк (кухня) |
+| Гл.6 | `tension` | Long Note Three · сгущающееся напряжение |
+| Гл.7 | `cold` | Ice Demon · ледяная башня |
+| Гл.8 | `climax` | Interloper · кульминация |
+| Эпилог | `dawn` | Frost Waltz · рассвет |
 
 ---
 
 ## 8. Заметки по реализации
 
 - Движок первой игры подходит без изменений: `app.js`/`style.css`/`index.html` — новый только `story.js`. Типы items те же: `t/ru`, `sp`, `prompt+opts`, `note`, `vocab`, `task{order|tf|quiz|multi}`, `clues`, `end`.
-- Отличия касаются контента: подсказки даёт **Эш** (попап «поведение кота» вместо Watson), в хотспотах — 4 зоны на класс + 1 flavor-зона (`cold_spot` без улики).
-- `BG_visitor`: показывается одним кадром в Гл.8 (силуэт в проёме), без анимаций — страх через холод, звук и тишину.
+- Отличия касаются контента: подсказки даёт **Эш** (попап «поведение кота» вместо Watson); улики-«note» показываются карточкой с изображением предмета (фото, мешочек, страница книги, пластинка); в хотспотах — 3 улики + 2 flavor-зоны (`cold_spot`, парты).
+- `CH_visitor`: силуэт-спрайт; появляется один раз в Гл.7 («кто-то стоит внизу лестницы») и исчезает после верного выбора; без реплик — страх через холод, звук и тишину.
 - Сейв/Continue/бейджи/блокнот — как в первой игре; строки могут лежать в `story.js` с теми же ключами (`chapter`, `title`, `objective`, `objectiveRu`, `bg`, `music`, `cast`, `items`).
 - Проверка соответствия уровню: все реплики ≤ 12 слов, времена — только из карты; фидбэки учат ровно одну ошибку за раз.
 - Порядок производства: story.js → тестовый прогон на движке (заглушки картинок) → арт-промпты → финальные фоны/спрайты → музыка → вычитка.

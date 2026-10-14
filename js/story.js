@@ -189,10 +189,10 @@ window.STORY = {
             { t: "I don't know. It was your choice.", ru: "Я не знаю. Это был ваш выбор.", fb: "Careful. Clever answers are expensive in this office." }
           ]
         },
-        { note: { clue: "photo", title: "Clue found: the scratched photo", ru: "Улика: испорченное фото" } },
+        { note: { clue: "photo", title: "Clue found: the scratched photo", ru: "Улика: испорченное фото" }, t: "On her desk: an old photo of the school choir. One face is scratched off with a knife — so deep the paper has a hole.", ru: "На столе: старое фото школьного хора. Одно лицо выцарапано ножом — так глубоко, что в бумаге дыра." },
         { sp: "Vale", t: "They sang at the Long Bell every year. Most of them have moved away.", ru: "Они пели у Долгого Колокола каждый год. Большинство из них уехали." },
         {
-          prompt: { sp: "Vale", t: "One question, Miss Bell. Then the fire and I have work.", ru: "Один вопрос, мисс Белл. Потом у нас с камином есть работа." },
+          prompt: { sp: "Vale", t: "One question, Miss Bell. Then the fire and I have work.", ru: "Один вопрос, мисс Белл. Потом у нас с камином будет работа." },
           opts: [
             { t: "Who was in the photo, ma'am?", ru: "Кто был на фото, мэм?", ok: true, fb: "She smiles, which is worse. 'A voice from long ago.'" },
             { t: "What is the Long Bell?", ru: "Что такое Долгий Колокол?", fb: "Not a what. A when." },
@@ -247,9 +247,9 @@ window.STORY = {
         {
           task: {
             kind: "quiz", title: "Prepositions of place", ru: "Предлоги места",
-            q: "The tally marks were ___ the board.", ru: "Метки мелом были ___ доской.",
-            opts: ["behind", "between", "across"], a: 0,
-            why: "'Behind the board' \u2014 marks hidden on the wall behind it."
+            q: "The tally marks are ___ the wardrobe.", ru: "Метки мелом ___ шкафом.",
+            opts: ["behind", "on", "in"], a: 0,
+            why: "'Behind the wardrobe' — the marks are hidden on the wall behind it."
           }
         },
         {
@@ -263,7 +263,7 @@ window.STORY = {
         {
           task: {
             kind: "quiz", title: "Prepositions of place", ru: "Предлоги места",
-            q: "The cold spot was ___ the window.", ru: "Холодное пятно было ___ окна.",
+            q: "The cold spot is ___ the window.", ru: "Холодное пятно ___ окна.",
             opts: ["near", "under", "over"], a: 0,
             why: "'Near the window' \u2014 the open pane."
           }
@@ -277,7 +277,7 @@ window.STORY = {
             ]
           }
         },
-        { vocab: { words: [["dust", "пыль"], ["wardrobe", "шкаф"], ["sewn", "пришито"], ["chalk", "мел"], ["cold spot", "холодное пятно"], ["board", "доска"]] } }
+        { vocab: { words: [["dust", "пыль"], ["wardrobe", "шкаф"], ["sewn", "пришито"], ["chalk", "мел"], ["cold spot", "холодное пятно"], ["mattress", "матрас"]] } }
       ]
     },
 
@@ -303,7 +303,7 @@ window.STORY = {
             { t: "When is the next ferry?", ru: "Когда следующий паром?", fb: "Spring, child. If you are still on the list." }
           ]
         },
-        { note: { clue: "salt_pouch", title: "Clue found: the salt pouch", ru: "Улика: мешочек с солью" } },
+        { note: { clue: "salt_pouch", title: "Clue found: the salt pouch", ru: "Улика: мешочек с солью" }, t: "She fills a little cloth bag with salt and ties it tight. “Salt at the door. Salt in your pocket. Salt in your boot if the wind is wrong.”", ru: "Она насыпает соль в мешочек и крепко завязывает: «Соль у двери. Соль в кармане. Соль в ботинке, если ветер не тот.»" },
         { t: "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth.", ru: "Серый кот подходит и прижимает лапу к твоей руке. Ошейник — старая кожа. Латунная пластинка почти стёрта." },
         { sp: "Ash", t: "Mrrrow.", ru: "Мррряу." },
         {
@@ -356,7 +356,7 @@ window.STORY = {
             { t: "June told me to.", ru: "Джун попросила меня.", fb: "Never put your friend's name in a dark room." }
           ]
         },
-        { note: { clue: "ledger_page", title: "Clue found: the ledger page", ru: "Улика: страница книги записей" } },
+        { note: { clue: "ledger_page", title: "Clue found: the ledger page", ru: "Улика: страница книги записей" }, t: "The last page is yesterday’s ink: “N. Bell — voce.” A line above it: “L. Marsh — transferred.” An older line, in different ink: “Wren — taken.”", ru: "Последняя страница — вчерашние чернила: «Н. Белл — voce». Строкой выше: «Л. Марш — переведена». Старая строка, другими чернилами: «Рен — забрана»." },
         { sp: "Quill", t: "If a name is written, the debt will find the voice.", ru: "Если имя записано — долг найдёт голос." },
         {
           task: {
@@ -403,9 +403,9 @@ window.STORY = {
         { t: "At midnight the corridor is a river of cold. The cat looks at you once \u2014 then walks. You follow.", ru: "В полночь коридор — река холода. Кот смотрит на тебя один раз — и идёт. Ты следуешь." },
         { t: "Thirteen steps up. On the landing, the moon leans on the arrow slit. The bell rope has been cut. The bell still hangs above: immense and quiet.", ru: "Тринадцать ступеней вверх. На площадке луна оперлась на бойницу. Верёвка колокола перерезана. Сам колокол висит выше: огромный и тихий." },
         { t: "By a hook on the wall hangs a child's coat, tiny against the stone. A name is sewn inside: Wren.", ru: "На крюке у стены висит детское пальто — крошечное на фоне камня. Внутри вшито имя: Рен." },
-        { note: { clue: "cat_tag", title: "Clue found: the brass tag", ru: "Улика: латунная пластинка" } },
+        { note: { clue: "cat_tag", title: "Clue found: the brass tag", ru: "Улика: латунная пластинка" }, t: "Ash lets you read his tag at last: “Wren”. The letters are worn almost smooth. He has waited a long time.", ru: "Эш наконец даёт прочитать пластинку: «Рен». Буквы почти стёрты. Он ждёт очень давно." },
         { sp: "Nora", t: "You have waited here a long time, haven't you?", ru: "Ты ждёшь здесь очень давно, правда?" },
-        { t: "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move.", ru: "Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается." },
+        { cast: { Visitor: { img: "assets/CH_visitor.png", side: "right" } }, t: "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move.", ru: "Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается." },
         {
           prompt: { sp: "Nora", t: "(Silence. The cat's ears turn. What do you do?)", ru: "(Тишина. Уши кота поворачиваются. Что ты сделаешь?)" },
           opts: [
@@ -414,6 +414,7 @@ window.STORY = {
             { t: "Run down the stairs.", ru: "Беги вниз по лестнице.", fb: "Fast is loud. Loud is an invitation." }
           ]
         },
+        { dropChars: ["Visitor"] },
         {
           task: {
             kind: "quiz", title: "must not", ru: "must not",
@@ -471,7 +472,7 @@ window.STORY = {
             kind: "multi", title: "Choose three clues that prove the bell is taking students", ru: "Выбери три улики, доказывающие, что колокол забирает учеников",
             opts: [
               "Lena's diary page \u2014 \u201cThey count us.\u201d",
-              "The chalk tally marks behind the board.",
+              "The chalk tally marks behind the wardrobe.",
               "The page from the old ledger with names and dates.",
               "Mrs. Poole's salt pouch.",
               "The scratched photo from the headmistress's desk.",
@@ -510,7 +511,7 @@ window.STORY = {
       objectiveRu: "Попрощайся — и пойми, что осталось позади.",
       bg: "assets/BG_causeway_dawn.png",
       music: "dawn",
-      cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "right" } },
+      cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "right" }, Ash: { img: "assets/CH_ash.png", side: "center" } },
       items: [
         { t: "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over \u2014 the quiet winter.", ru: "На рассвете дамба — лента чёрной воды и тающего льда. Гудок парома летит над озером. Зима кончилась — наступила тихая зима." },
         { sp: "June", t: "You did it. You said the words.", ru: "Ты сделала это. Ты сказала слова." },

@@ -436,6 +436,22 @@ html, body {
 
 .watson-card button { grid-column: 1 / -1; justify-self: center; }
 
+#cluePopup { z-index: 80; }
+
+.clue-card { grid-template-columns: 170px 1fr; }
+
+.clue-card img {
+  width: 170px;
+  max-height: 40vh;
+  border-radius: 14px;
+  object-fit: contain;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.clue-card h3 { margin-bottom: 6px; }
+
+.clue-card .ru-line { margin: 8px 0 0; color: #c8bda6; font-size: 14px; font-style: italic; }
+
 .task-card { text-align: center; max-width: 720px; }
 
 .task-hint { color: #c8bda6; font-size: 14px; font-style: italic; margin-top: 0; }

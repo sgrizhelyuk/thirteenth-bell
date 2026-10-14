@@ -21,6 +21,8 @@
     btnHome: $("btnHome"), btnNotebook: $("btnNotebook"),
     btnWatsonTop: $("btnWatsonTop"), btnLang: $("btnLang"), btnMusic: $("btnMusic"),
     watsonPopup: $("watsonPopup"), watsonText: $("watsonText"), watsonClose: $("watsonClose"),
+    cluePopup: $("cluePopup"), clueImg: $("clueImg"), clueTitle: $("clueTitle"),
+    clueText: $("clueText"), clueTextRu: $("clueTextRu"), clueClose: $("clueClose"),
     notebook: $("notebookPanel"), notebookBody: $("notebookBody"), notebookClose: $("notebookClose"),
     taskPanel: $("taskPanel"), taskTitle: $("taskTitle"), taskBody: $("taskBody"), taskHint: $("taskHint"),
     toast: $("toast"),
@@ -166,6 +168,7 @@
     img.src = c.img;
     img.alt = name;
     img.dataset.id = c.img.split("/").pop().replace(".png", "");
+    img.dataset.charName = name;
     els.sprites.appendChild(img);
   }
 
@@ -323,14 +326,30 @@
       });
       return;
     }
-    if (item.clearChars) { clearSprites(); delete sc.cast.Alex; delete sc.cast.Emma; delete sc.cast.Tim; state.pos++; renderItem(); return; }
+    if (item.clearChars) { clearSprites(); sc.cast = {}; state.pos++; renderItem(); return; }
+    if (item.dropChars) {
+      item.dropChars.forEach(function (n) {
+        var el = els.sprites.querySelector('[data-char-name="' + n + '"]');
+        if (el && el.parentNode) { el.parentNode.removeChild(el); }
+        delete sc.cast[n];
+      });
+      state.pos++;
+      renderItem();
+      return;
+    }
     if (item.cast) {
       Object.keys(item.cast).forEach(function (n) {
         sc.cast[n] = item.cast[n];
         setSprite(n, item.cast[n]);
       });
     }
-    if (item.note) { addClue(item.note.clue, true); state.pos++; renderItem(); return; }
+    if (item.note) {
+      addClue(item.note.clue, true);
+      if (item.t) { showCluePopup(item); return; }
+      state.pos++;
+      renderItem();
+      return;
+    }
     if (item.vocab) { showVocab(item.vocab); return; }
     if (item.prompt && item.opts) { renderChoice(item); return; }
     if (item.clues) { startClueMode(item.clues); return; }
@@ -809,6 +828,20 @@
     els.watsonPopup.hidden = false;
   }
 
+  /* ---------------- clue card ---------------- */
+
+  function showCluePopup(item) {
+    var c = CLUES[item.note.clue] || {};
+    var img = item.note.img || c.img;
+    if (img) { els.clueImg.src = img; els.clueImg.hidden = false; }
+    else { els.clueImg.hidden = true; }
+    els.clueTitle.textContent = item.note.title || c.name || "";
+    els.clueText.textContent = item.t || "";
+    els.clueTextRu.textContent = item.ru || "";
+    els.clueTextRu.hidden = !(item.ru && state.lang === "both");
+    els.cluePopup.hidden = false;
+  }
+
   /* ---------------- toast ---------------- */
 
   var toastTimer = null;
@@ -898,6 +931,7 @@
       els.taskPanel.hidden = true;
       els.notebook.hidden = true;
       els.watsonPopup.hidden = true;
+      els.cluePopup.hidden = true;
       clearHotspots();
       showScreen("title");
       initTitle();
@@ -916,6 +950,10 @@
       }
     };
     els.btnLang.onclick = toggleLang;
+    els.clueClose.onclick = function () {
+      els.cluePopup.hidden = true;
+      advance();
+    };
     if (els.btnMusic) { els.btnMusic.onclick = function () { setMusicEnabled(!musicEnabled()); }; }
     els.btnRestart.onclick = function () { resetState(); clearSave(); startGame(); };
     els.btnEndTitle.onclick = function () { clearHotspots(); showScreen("title"); initTitle(); };

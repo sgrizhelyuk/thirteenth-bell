@@ -135,6 +135,9 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
   let quizCount = 0;
   let lastQuizPos = -1;
   let quizSamePos = 0;
+  let cluePopups = 0;
+  let visitorShown = false;
+  let visitorDropped = false;
   let nextLeak = 0;
   let musicMismatch = 0;
   let steps = 0;
@@ -144,12 +147,18 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
     if (stopAfterScenes && visited.size >= stopAfterScenes && BMH.state.scene > 0) break;
 
     if (!$("watsonPopup").hidden) { click($("watsonClose"), "watson close"); await sleep(20); continue; }
+    if (!$("cluePopup").hidden) { cluePopups++; click($("clueClose"), "clue close"); await sleep(20); continue; }
     if (!$("notebookPanel").hidden) { click($("notebookClose"), "notebook close"); continue; }
 
     const st = BMH.state;
     const sc = BMH.scenes[st.scene];
     if (!sc) throw new Error("bad scene index " + st.scene);
     visited.add(sc.id);
+    if (sc.id === "ch7") {
+      const vis = !!doc.querySelector('#sprites [data-char-name="Visitor"]');
+      if (vis) visitorShown = true;
+      else if (visitorShown) visitorDropped = true;
+    }
     if (BMH.music && sc.music && !$("gameScreen").hidden && BMH.music.current() !== sc.music) musicMismatch++;
     const item = sc.items[st.pos];
 
@@ -226,7 +235,7 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
     await sleep(20);
   }
 
-  return { window, doc, errors, BMH, visited, $, click, steps, vocabSeen, taskCyrillic, choiceCount, correctFirstCount, choiceSamePos, quizCount, quizSamePos, nextLeak, musicMismatch };
+  return { window, doc, errors, BMH, visited, $, click, steps, vocabSeen, taskCyrillic, choiceCount, correctFirstCount, choiceSamePos, quizCount, quizSamePos, cluePopups, visitorShown, visitorDropped, nextLeak, musicMismatch };
 }
 
 (async () => {
@@ -249,6 +258,9 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
   check("no two dialogue choices in a row at the same slot", run1.choiceSamePos === 0, "same-slot repeats: " + run1.choiceSamePos);
   check("quizzes shuffled, no same-slot repeats", run1.quizCount >= 9 && run1.quizSamePos === 0,
     "quizzes=" + run1.quizCount + " same-slot repeats: " + run1.quizSamePos);
+  check("clue cards shown for all 4 find-one-clue moments", run1.cluePopups === 4, "clue cards: " + run1.cluePopups);
+  check("the figure appears in ch7 and vanishes after the choice", run1.visitorShown && run1.visitorDropped,
+    "shown=" + run1.visitorShown + " dropped=" + run1.visitorDropped);
   check("Next hidden while choices active (no skip)", run1.nextLeak === 0, "leaks: " + run1.nextLeak);
   check("per-chapter music follows scene", run1.musicMismatch === 0, "mismatches: " + run1.musicMismatch);
 
@@ -320,6 +332,7 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
     while (steps++ < 4000) {
       if (!BMH) throw new Error("no __BMH__");
       if (!$("watsonPopup").hidden) { click($("watsonClose")); continue; }
+      if (!$("cluePopup").hidden) { click($("clueClose"), "clue close"); await sleep(20); continue; }
       if (!$("taskPanel").hidden) {
         const st = BMH.state;
         const it = BMH.scenes[st.scene].items[st.pos];
