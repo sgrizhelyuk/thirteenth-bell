@@ -199,11 +199,13 @@
   /* ---------------- music ---------------- */
 
   var MUSIC = {
-    lounge: "assets/music/airport_lounge.mp3",
-    lounge2: "assets/music/backbay_lounge.mp3",
-    noir: "assets/music/night_on_the_docks_piano.mp3",
-    mystery: "assets/music/comfortable_mystery.mp3",
-    piano: "assets/music/evening_fall_piano.mp3"
+    dread: "assets/music/dread.mp3",
+    mystery: "assets/music/mystery.mp3",
+    warm: "assets/music/warm.mp3",
+    tension: "assets/music/tension.mp3",
+    cold: "assets/music/cold.mp3",
+    climax: "assets/music/climax.mp3",
+    dawn: "assets/music/dawn.mp3"
   };
   var MUSIC_KEY = "bmh_music_v1";
   var MUSIC_VOL = 0.42;
@@ -803,7 +805,7 @@
       { img: "assets/UI_logo_emblem.png", name: "Iron Grammar", ru: "Железная грамматика", got: state.wrongTasks === 0 }
     ];
     els.endBadges.innerHTML = "";
-    playMusic("piano", 1600);
+    playMusic("dawn", 1600);
     badges.forEach(function (b) {
       var d = document.createElement("div");
       d.className = "badge " + (b.got ? "got" : "missed");

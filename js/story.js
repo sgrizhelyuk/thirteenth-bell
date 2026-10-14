@@ -27,7 +27,7 @@ window.STORY = {
       objective: "Cross the causeway and remember the driver's warning.",
       objectiveRu: "Пересеки дамбу и запомни предупреждение водителя.",
       bg: "assets/BG_causeway_night.png",
-      music: "noir",
+      music: "dread",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" } },
       items: [
         { t: "The coach rocks in the wind. Rain freezes on the windows. Outside, black water is already licking at the road.", ru: "Экипаж качает ветром. Дождь замерзает на окнах. Снаружи чёрная вода уже лижет дорогу." },
@@ -65,7 +65,7 @@ window.STORY = {
       objective: "Learn the five rules by heart.",
       objectiveRu: "Выучи пять правил наизусть.",
       bg: "assets/BG_gate.png",
-      music: "noir",
+      music: "dread",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Crane: { img: "assets/CH_crane.png", side: "right" } },
       items: [
         { t: "The gate is open. A man with a lantern waits in the snow \u2014 as if he heard you coming an hour ago.", ru: "Ворота открыты. Человек с фонарём ждёт в снегу — будто услышал тебя ещё час назад." },
@@ -288,7 +288,7 @@ window.STORY = {
       objective: "Ask the cook about the legend \u2014 and take her gift.",
       objectiveRu: "Расспроси повариху о легенде — и возьми её подарок.",
       bg: "assets/BG_kitchen_night.png",
-      music: "lounge",
+      music: "warm",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Poole: { img: "assets/CH_poole.png", side: "right" }, Ash: { img: "assets/CH_ash.png", side: "center" } },
       items: [
         { t: "The kitchen is the only warm room in Winterhollow. Juniper, salt and smoke. A grey cat sits on the flour bin like he owns the building.", ru: "Кухня — единственная тёплая комната в Уинтерхоллоу. Можжевельник, соль и дым. Серый кот сидит на ящике с мукой, как будто дом принадлежит ему." },
@@ -341,7 +341,7 @@ window.STORY = {
       objective: "Find the old book \u2014 and your own name.",
       objectiveRu: "Найди старую книгу — и своё имя.",
       bg: "assets/BG_archive.png",
-      music: "mystery",
+      music: "tension",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Quill: { img: "assets/CH_quill.png", side: "right" } },
       items: [
         { t: "The archive is one locked room behind another locked room. Mr. Quill unlocks them both with hands that shake.", ru: "Архив — это одна запертая комната за другой запертой комнатой. Мистер Куилл отпирает обе дрожащими руками." },
@@ -397,7 +397,7 @@ window.STORY = {
       objective: "Follow the cat into the tower \u2014 and stay silent.",
       objectiveRu: "Иди за котом в башню — и молчи.",
       bg: "assets/BG_tower_stairs.png",
-      music: "noir",
+      music: "cold",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Ash: { img: "assets/CH_ash.png", side: "center" } },
       items: [
         { t: "At midnight the corridor is a river of cold. The cat looks at you once \u2014 then walks. You follow.", ru: "В полночь коридор — река холода. Кот смотрит на тебя один раз — и идёт. Ты следуешь." },
@@ -449,7 +449,7 @@ window.STORY = {
       objective: "Name the debt and break it \u2014 with the right words.",
       objectiveRu: "Назови долг и разорви его — правильными словами.",
       bg: "assets/BG_tower_stairs.png",
-      music: "noir",
+      music: "climax",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Crane: { img: "assets/CH_crane.png", side: "right" } },
       items: [
         { t: "June waits at the tower door with a candle and a stolen key. Behind her stands Mr. Crane with his lantern. He looks ten years older.", ru: "Джун ждёт у двери башни со свечой и украденным ключом. За ней — мистер Крейн с фонарём. Он выглядит на десять лет старше." },
@@ -509,7 +509,7 @@ window.STORY = {
       objective: "Say goodbye \u2014 and understand what stayed behind.",
       objectiveRu: "Попрощайся — и пойми, что осталось позади.",
       bg: "assets/BG_causeway_dawn.png",
-      music: "piano",
+      music: "dawn",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "right" } },
       items: [
         { t: "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over \u2014 the quiet winter.", ru: "На рассвете дамба — лента чёрной воды и тающего льда. Гудок парома летит над озером. Зима кончилась — тихая зима." },
