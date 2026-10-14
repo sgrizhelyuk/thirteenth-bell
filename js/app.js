@@ -38,6 +38,30 @@
     dialogCtx: null
   };
 
+  /* dialogue frame preload: the box must never appear before its parchment frame */
+  var frameReady = false;
+  var frameQueue = [];
+  function whenFrameReady(fn) {
+    if (frameReady) { fn(); return; }
+    frameQueue.push(fn);
+  }
+  function preloadDialogueUi() {
+    var markReady = function () {
+      if (frameReady) { return; }
+      frameReady = true;
+      var q = frameQueue.splice(0);
+      q.forEach(function (f) { f(); });
+    };
+    var frame = new Image();
+    frame.onload = markReady;
+    frame.onerror = markReady;
+    frame.src = "assets/UI_dialogue_frame.png";
+    if (frame.complete) { markReady(); }
+    setTimeout(markReady, 2500);
+    var plate = new Image();
+    plate.src = "assets/UI_name_plate.png";
+  }
+
   /* ---------------- persistence ---------------- */
 
   var memSave = null;
@@ -314,19 +338,21 @@
   }
 
   function renderDialogue(item) {
-    els.choices.innerHTML = "";
-    els.dialogue.hidden = false;
-    var sc = SCENES[state.scene];
-    if (item.sp && sc.cast && sc.cast[item.sp]) {
-      /* sprite already present; ensure it is visible */
-    }
-    els.nameplate.hidden = !item.sp;
-    els.nameplate.textContent = item.sp || "";
-    els.lineText.className = item.sp ? "line" : "line narration";
-    els.lineRu.hidden = !(item.ru && state.lang === "both");
-    els.lineRu.textContent = item.ru || "";
-    state.hint = item.hint || sc.objective || "";
-    typeText(item.t || "");
+    whenFrameReady(function () {
+      els.choices.innerHTML = "";
+      els.dialogue.hidden = false;
+      var sc = SCENES[state.scene];
+      if (item.sp && sc.cast && sc.cast[item.sp]) {
+        /* sprite already present; ensure it is visible */
+      }
+      els.nameplate.hidden = !item.sp;
+      els.nameplate.textContent = item.sp || "";
+      els.lineText.className = item.sp ? "line" : "line narration";
+      els.lineRu.hidden = !(item.ru && state.lang === "both");
+      els.lineRu.textContent = item.ru || "";
+      state.hint = item.hint || sc.objective || "";
+      typeText(item.t || "");
+    });
   }
 
   function typeText(text) {
@@ -632,14 +658,16 @@
     var total = cfg.hotspots.length;
 
     function finishClues() {
-      els.dialogue.hidden = false;
-      els.nameplate.hidden = true;
-      els.lineRu.hidden = true;
-      els.lineText.className = "line narration";
-      els.lineText.textContent = "You found everything. Time to continue.";
-      els.btnNext.hidden = false;
-      els.hotspots.innerHTML = "";
-      els.hotspots.classList.remove("searching");
+      whenFrameReady(function () {
+        els.dialogue.hidden = false;
+        els.nameplate.hidden = true;
+        els.lineRu.hidden = true;
+        els.lineText.className = "line narration";
+        els.lineText.textContent = "You found everything. Time to continue.";
+        els.btnNext.hidden = false;
+        els.hotspots.innerHTML = "";
+        els.hotspots.classList.remove("searching");
+      });
     }
 
     function place(x, y, w, h, cls, handler) {
@@ -868,6 +896,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", function () {
+    preloadDialogueUi();
     wire();
     initTitle();
     showScreen("title");
