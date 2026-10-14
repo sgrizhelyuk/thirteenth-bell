@@ -237,6 +237,8 @@
   var musicIdx = 0;
   var musicSrc = null;
   var musicKey = null;
+  var lastChoiceSlot = null;
+  var lastQuizSlot = null;
 
   function musicEnabled() {
     try { return localStorage.getItem(MUSIC_KEY) !== "off"; } catch (e) { return true; }
@@ -389,15 +391,33 @@
 
   /* ---------------- choices ---------------- */
 
+  function shuffleOrder(n) {
+    var order = [];
+    for (var i = 0; i < n; i++) { order.push(i); }
+    for (var k = n - 1; k > 0; k--) {
+      var j = Math.floor(Math.random() * (k + 1));
+      var t = order[k]; order[k] = order[j]; order[j] = t;
+    }
+    return order;
+  }
+
+  function avoidSameSlot(order, correctIdx, avoidSlot) {
+    var slot = order.indexOf(correctIdx);
+    if (order.length < 2 || avoidSlot == null || slot !== avoidSlot) { return slot; }
+    var other = (slot + 1 + Math.floor(Math.random() * (order.length - 1))) % order.length;
+    order[slot] = order[other];
+    order[other] = correctIdx;
+    return other;
+  }
+
   function renderChoice(item) {
     renderDialogue({ sp: item.prompt.sp, t: item.prompt.t, ru: item.prompt.ru, hint: item.prompt.hint });
     els.btnNext.hidden = true;
     els.choices.innerHTML = "";
-    var order = item.opts.map(function (_, i) { return i; });
-    for (var i = order.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var tmp = order[i]; order[i] = order[j]; order[j] = tmp;
-    }
+    var order = shuffleOrder(item.opts.length);
+    var correctIdx = -1;
+    item.opts.forEach(function (o, i) { if (o.ok && correctIdx === -1) { correctIdx = i; } });
+    if (correctIdx !== -1) { lastChoiceSlot = avoidSameSlot(order, correctIdx, lastChoiceSlot); }
     order.forEach(function (oi) {
       var opt = item.opts[oi];
       var b = document.createElement("button");
@@ -487,12 +507,16 @@
     q.className = "task-q";
     q.textContent = task.q;
     els.taskBody.appendChild(q);
-    task.opts.forEach(function (opt, i) {
+    var order = shuffleOrder(task.opts.length);
+    lastQuizSlot = avoidSameSlot(order, task.a, lastQuizSlot);
+    order.forEach(function (oi) {
+      var opt = task.opts[oi];
       var b = document.createElement("button");
       b.className = "mini-btn wide";
+      b.dataset.idx = String(oi);
       b.textContent = opt;
       b.onclick = function () {
-        if (i === task.a) {
+        if (oi === task.a) {
           b.classList.add("ok");
           taskDone("Correct!");
         } else {
@@ -550,7 +574,9 @@
     var correctSentences = sentenceMode
       ? task.answer.split("|").map(function (s) { return s.trim(); })
       : null;
-    var shuffled = task.words.slice().sort(function () { return Math.random() - 0.5; });
+    var shuffled = shuffleOrder(task.words.length).map(function (i) { return task.words[i]; });
+    var stillInOrder = shuffled.length > 2 && shuffled.every(function (w, i) { return w === task.words[i]; });
+    if (stillInOrder) { var swapTmp = shuffled[0]; shuffled[0] = shuffled[1]; shuffled[1] = swapTmp; }
     var built = [];
     var norm = function (s) { return s.toLowerCase().replace(/\s+/g, " ").trim(); };
 

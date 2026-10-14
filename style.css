@@ -230,6 +230,7 @@ html, body {
 .sprite-left { left: 2vw; }
 .sprite-right { right: 2vw; }
 .sprite-center { left: 50%; transform: translateX(-50%); height: 46vh; bottom: 4vh; }
+.sprite[data-id="CH_june"].sprite-center { height: 72vh; bottom: calc(-1 * (var(--bg-overflow, 0px) + 0.6vh)); }
 
 .sprite[data-id="CH_alex"] { --sprite-h: 71vh; }
 .sprite[data-id="CH_emma"] { --sprite-h: 68vh; }

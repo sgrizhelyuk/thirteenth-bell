@@ -30,7 +30,7 @@ window.STORY = {
       music: "dread",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" } },
       items: [
-        { t: "The coach rocks in the wind. Rain freezes on the windows. Outside, black water is already licking at the road.", ru: "Экипаж качает ветром. Дождь замерзает на окнах. Снаружи чёрная вода уже лижет дорогу." },
+        { t: "The coach rocks in the wind. Rain freezes on the windows. Outside, black water is already licking at the road.", ru: "Экипаж качается на ветру. Дождь замерзает на окнах. Снаружи чёрная вода уже лижет дорогу." },
         { sp: "Pike", t: "Last crossing tonight. Mind the tide, kid.", ru: "Последний рейс на сегодня. Следи за приливом, малыш." },
         { sp: "Nora", t: "I have a letter. Winterhollow Academy.", ru: "У меня письмо. Академия Уинтерхоллоу." },
         {
@@ -42,7 +42,7 @@ window.STORY = {
           ]
         },
         { sp: "Pike", t: "When the bell rings thirteen, close your eyes and do not answer.", ru: "Когда колокол ударит тринадцать раз — закрой глаза и не отвечай." },
-        { sp: "Nora", t: "Thirteen? A bell rings twelve.", ru: "Тринадцать? Колокол звонит двенадцать." },
+        { sp: "Nora", t: "Thirteen? A bell rings twelve.", ru: "Тринадцать? Колокол звонит двенадцать раз." },
         { sp: "Pike", t: "Not this bell. And if you hear your name tonight \u2014 it is not me calling.", ru: "Не этот колокол. И если услышишь своё имя сегодня — это не я зову." },
         {
           task: {
@@ -76,7 +76,7 @@ window.STORY = {
           prompt: { sp: "Crane", t: "Before you step through: do you know our rules?", ru: "Прежде чем войти: ты знаешь наши правила?" },
           opts: [
             { t: "No, sir. Please, tell me the rules.", ru: "Нет, сэр. Пожалуйста, расскажите мне правила.", ok: true, fb: "Polite and honest. Good start." },
-            { t: "Rules are boring.", ru: "Правила — скучные.", fb: "Wrong tone. And 'boring' is a dangerous word here." },
+            { t: "Rules are boring.", ru: "Правила — это скучно.", fb: "Wrong tone. And 'boring' is a dangerous word here." },
             { t: "I can learn them tomorrow.", ru: "Я могу выучить их завтра.", fb: "Some rules have to be learned tonight. Note 'have to'." }
           ]
         },
@@ -124,7 +124,7 @@ window.STORY = {
         { t: "Your room is at the end of the west corridor. The brass number says 13. The girl inside is awake, pretending not to be.", ru: "Твоя комната в конце западного коридора. Латунная цифра на двери — 13. Девочка внутри не спит и делает вид, что спит." },
         { sp: "June", t: "You are the new one. Nora Bell. Here everyone is called by their full name. Like a list.", ru: "Ты новенькая. Нора Белл. Здесь всех зовут полным именем. Как список." },
         { sp: "Nora", t: "You waited up for me.", ru: "Ты меня дождалась." },
-        { sp: "June", t: "I count every night now. Old habit of this room.", ru: "Теперь я считаю каждый вечер. Старая привычка этой комнаты." },
+        { sp: "June", t: "I count every night now. Old habit of this room.", ru: "Теперь я считаю каждую ночь. Старая привычка этой комнаты." },
         {
           prompt: { sp: "June", t: "Quick \u2014 what did Crane tell you at the gate?", ru: "Быстро — что Крейн сказал тебе у ворот?" },
           opts: [
@@ -135,7 +135,7 @@ window.STORY = {
         },
         { sp: "June", t: "Lena lived here before you. She has left her diary, her lamp, her winter coat. People who leave take their things.", ru: "До тебя здесь жила Лена. Она оставила дневник, лампу, зимнее пальто. Кто уезжает — забирает свои вещи." },
         { sp: "Nora", t: "Where has she gone?", ru: "Куда она уехала?" },
-        { sp: "June", t: "The letter says she has moved to a school in the south. The letter came two days after she was gone.", ru: "В письме сказано, что она перешла в школу на юге. Письмо пришло через два дня после того, как она исчезла." },
+        { sp: "June", t: "The letter says she has moved to a school in the south. The letter came two days after she was gone.", ru: "В письме сказано, что она перевелась в школу на юге. Письмо пришло через два дня после того, как она исчезла." },
         {
           task: {
             kind: "quiz", title: "Present Perfect", ru: "Present Perfect",
@@ -161,7 +161,7 @@ window.STORY = {
             ]
           }
         },
-        { t: "Outside, snow taps the window. For one second the tapping sounds like ten small fingers.", ru: "Снаружи снег стучит в окно. Одно мгновение стук похож на десять маленьких пальцев." },
+        { t: "Outside, snow taps the window. For one second the tapping sounds like ten small fingers.", ru: "Снаружи снег стучит в окно. На секунду этот стук похож на десять маленьких пальцев." },
         { vocab: { words: [["roommate", "соседка по комнате"], ["count", "считать"], ["leave / left", "оставить / уехать"], ["moved", "переехала"], ["coat", "пальто"], ["two days later", "через два дня"]] } }
       ]
     },
@@ -177,7 +177,7 @@ window.STORY = {
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Vale: { img: "assets/CH_vale.png", side: "right" } },
       items: [
         { t: "The office smells of cold paper and old wax. The fire is burning, but the room is not warm.", ru: "Кабинет пахнет холодной бумагой и старым воском. Огонь горит, но в комнате не тепло." },
-        { sp: "Vale", t: "Miss Bell. My condolences on your family. A scholarship at this hour of the year is unusual.", ru: "Мисс Белл. Мои соболезнования по поводу вашей семьи. Стипендия в такое время года — необычно." },
+        { sp: "Vale", t: "Miss Bell. My condolences on your loss. A scholarship at this hour of the year is unusual.", ru: "Мисс Белл. Примите мои соболезнования. Стипендия в такое время года — необычно." },
         { sp: "Vale", t: "You will find that Winterhollow has five rules and one hundred and one rituals. You may forget the rituals.", ru: "Вы обнаружите, что в Уинтерхоллоу пять правил и сто один ритуал. Ритуалы можете забыть." },
         { sp: "Nora", t: "And the rules?", ru: "А правила?" },
         { sp: "Vale", t: "Rules are paid for, Miss Bell. Every rule here costs something.", ru: "За правила платят, мисс Белл. Каждое правило здесь чего-то стоит." },
@@ -228,7 +228,7 @@ window.STORY = {
       music: "mystery",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "right" } },
       items: [
-        { t: "June takes you to the east wing after tea. 'Lena's classroom,' she whispers. 'Mind the third stair.'", ru: "После чая Джун ведёт тебя в восточное крыло. «Класс Лены, — шепчет она. — Осторожно, третья ступенька.»" },
+        { t: "June takes you to the east wing after tea. “Lena’s classroom,” she whispers. “Mind the third stair.”", ru: "После чая Джун ведёт тебя в восточное крыло. «Класс Лены, — шепчет она. — Осторожно, третья ступенька.»" },
         { sp: "June", t: "Her desk, her chalk, her secret places. Look \u2014 and keep your voice down.", ru: "Её парта, её мел, её тайные места. Смотри — и не повышай голос." },
         {
           clues: {
@@ -304,8 +304,8 @@ window.STORY = {
           ]
         },
         { note: { clue: "salt_pouch", title: "Clue found: the salt pouch", ru: "Улика: мешочек с солью" } },
-        { t: "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth.", ru: "Серый кот подходит и прижимается лапой к твоей руке. Ошейник — старая кожа. Латунная пластинка почти стёрта." },
-        { sp: "Ash", t: "Mrrrow.", ru: "Мррр." },
+        { t: "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth.", ru: "Серый кот подходит и прижимает лапу к твоей руке. Ошейник — старая кожа. Латунная пластинка почти стёрта." },
+        { sp: "Ash", t: "Mrrrow.", ru: "Мррряу." },
         {
           task: {
             kind: "quiz", title: "Present Perfect: just", ru: "Present Perfect: just",
@@ -345,15 +345,15 @@ window.STORY = {
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Quill: { img: "assets/CH_quill.png", side: "right" } },
       items: [
         { t: "The archive is one locked room behind another locked room. Mr. Quill unlocks them both with hands that shake.", ru: "Архив — это одна запертая комната за другой запертой комнатой. Мистер Куилл отпирает обе дрожащими руками." },
-        { sp: "Quill", t: "You are the Bell girl. I have already polished your file.", ru: "Ты девочка-Белл. Я уже протёр пыль с твоего дела." },
+        { sp: "Quill", t: "You are the Bell girl. I have already polished your file.", ru: "Ты — та самая Белл. Я уже протёр пыль с твоей карточки." },
         { sp: "Nora", t: "I want to see the school ledger.", ru: "Я хочу увидеть школьную книгу записей." },
-        { sp: "Quill", t: "The ledger shows who came and who left. It does not show where. If you read it aloud, the school will hear you.", ru: "Книга показывает, кто пришёл и кто ушёл. Она не показывает куда. Если прочтёшь вслух — школа услышит." },
+        { sp: "Quill", t: "The ledger shows who came and who left. It does not show where. If you read it aloud, the school will hear you.", ru: "Книга показывает, кто пришёл и кто ушёл. Она не показывает куда. Если прочтёшь её вслух — школа услышит тебя." },
         {
           prompt: { sp: "Quill", t: "Why do you want the old book, Miss Bell?", ru: "Зачем тебе старая книга, мисс Белл?" },
           opts: [
             { t: "I need the truth. People are missing.", ru: "Мне нужна правда. Люди пропадают.", ok: true, fb: "'Missing' \u2014 good word. Sharp and quiet. He opens the ledger." },
             { t: "I want to see my name.", ru: "Я хочу увидеть своё имя.", fb: "You have just said something dangerous." },
-            { t: "June told me to.", ru: "Джун сказала.", fb: "Never put your friend's name in a dark room." }
+            { t: "June told me to.", ru: "Джун попросила меня.", fb: "Never put your friend's name in a dark room." }
           ]
         },
         { note: { clue: "ledger_page", title: "Clue found: the ledger page", ru: "Улика: страница книги записей" } },
@@ -401,11 +401,11 @@ window.STORY = {
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Ash: { img: "assets/CH_ash.png", side: "center" } },
       items: [
         { t: "At midnight the corridor is a river of cold. The cat looks at you once \u2014 then walks. You follow.", ru: "В полночь коридор — река холода. Кот смотрит на тебя один раз — и идёт. Ты следуешь." },
-        { t: "Thirteen steps up. On the landing, the moon leans on the arrow slit. The bell rope has been cut. The bell still hangs above: immense and quiet.", ru: "Тринадцать ступеней вверх. На площадке луна облокотилась на бойницу. Верёвка колокола перерезана. Сам колокол висит выше: огромный и тихий." },
-        { t: "By a hook on the wall hangs a child's coat, tiny against the stone. A name is sewn inside: Wren.", ru: "На крюке у стены висит детское пальто — крошечное у камня. Внутри вшито имя: Крапивник." },
+        { t: "Thirteen steps up. On the landing, the moon leans on the arrow slit. The bell rope has been cut. The bell still hangs above: immense and quiet.", ru: "Тринадцать ступеней вверх. На площадке луна оперлась на бойницу. Верёвка колокола перерезана. Сам колокол висит выше: огромный и тихий." },
+        { t: "By a hook on the wall hangs a child's coat, tiny against the stone. A name is sewn inside: Wren.", ru: "На крюке у стены висит детское пальто — крошечное на фоне камня. Внутри вшито имя: Рен." },
         { note: { clue: "cat_tag", title: "Clue found: the brass tag", ru: "Улика: латунная пластинка" } },
         { sp: "Nora", t: "You have waited here a long time, haven't you?", ru: "Ты ждёшь здесь очень давно, правда?" },
-        { t: "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. They do not move.", ru: "Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Он не двигается." },
+        { t: "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move.", ru: "Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается." },
         {
           prompt: { sp: "Nora", t: "(Silence. The cat's ears turn. What do you do?)", ru: "(Тишина. Уши кота поворачиваются. Что ты сделаешь?)" },
           opts: [
@@ -434,7 +434,7 @@ window.STORY = {
             kind: "tf", title: "True or False?", ru: "Верно или неверно?",
             stmts: [
               { t: "The bell rope has been cut.", ru: "Верёвка колокола перерезана.", a: true },
-              { t: "Wren is a name sewn inside a small coat.", ru: "Крапивник — имя, вшитое в маленькое пальто.", a: true }
+              { t: "Wren is a name sewn inside a small coat.", ru: "Рен — имя, вшитое в маленькое пальто.", a: true }
             ]
           }
         },
@@ -450,7 +450,7 @@ window.STORY = {
       objectiveRu: "Назови долг и разорви его — правильными словами.",
       bg: "assets/BG_tower_stairs.png",
       music: "climax",
-      cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Crane: { img: "assets/CH_crane.png", side: "right" } },
+      cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "center" }, Crane: { img: "assets/CH_crane.png", side: "right" } },
       items: [
         { t: "June waits at the tower door with a candle and a stolen key. Behind her stands Mr. Crane with his lantern. He looks ten years older.", ru: "Джун ждёт у двери башни со свечой и украденным ключом. За ней — мистер Крейн с фонарём. Он выглядит на десять лет старше." },
         { sp: "Crane", t: "Vale is coming. The Long Bell is at three. She will read the names aloud, and the bell will answer.", ru: "Вейл идёт. Долгий Колокол — в три. Она прочтёт имена вслух, и колокол ответит." },
@@ -484,8 +484,8 @@ window.STORY = {
         {
           task: {
             kind: "order", title: "Tell the story (Past Simple)", ru: "Расскажи историю (Past Simple)",
-            words: ["vale", "wrote", "my", "name", "in the old ledger", "."],
-            answer: "vale wrote my name in the old ledger ."
+            words: ["Vale", "wrote", "my", "name", "in the old ledger", "."],
+            answer: "Vale wrote my name in the old ledger ."
           }
         },
         {
@@ -512,10 +512,10 @@ window.STORY = {
       music: "dawn",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "right" } },
       items: [
-        { t: "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over \u2014 the quiet winter.", ru: "На рассвете дамба — лента чёрной воды и тающего льда. Гудок парома летит над озером. Зима кончилась — тихая зима." },
+        { t: "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over \u2014 the quiet winter.", ru: "На рассвете дамба — лента чёрной воды и тающего льда. Гудок парома летит над озером. Зима кончилась — наступила тихая зима." },
         { sp: "June", t: "You did it. You said the words.", ru: "Ты сделала это. Ты сказала слова." },
         { t: "Mr. Crane raises his lantern at the gate. He does not speak. He will not speak again \u2014 the bell, broken or not, has his voice. He waves. It is enough.", ru: "Мистер Крейн поднимает фонарь у ворот. Он не говорит. Он больше не заговорит — колокол, сломанный или нет, забрал его голос. Он машет рукой. Этого достаточно." },
-        { t: "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be put down.", ru: "Пальто Лены всё ещё висит в комнате 13. Некоторые вещи нельзя вернуть. Некоторые долги можно отменить." },
+        { t: "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be put down.", ru: "Пальто Лены всё ещё висит в комнате 13. Некоторые вещи нельзя вернуть. Некоторые долги можно отпустить." },
         {
           task: {
             kind: "quiz", title: "Present Perfect", ru: "Present Perfect",
@@ -528,7 +528,7 @@ window.STORY = {
             why: "Present Perfect with 'since' for a state from the past until now: has not rung since that night."
           }
         },
-        { t: "Ash rides on your suitcase like a captain. In his collar, the old tag says Wren. Wherever you go, he will count one heartbeat more.", ru: "Эш едет на твоём чемодане, как капитан. В его ошейнике старая пластинка: «Крапивник». Куда бы ты ни поехала — он будет рядом." },
+        { t: "Ash rides on your suitcase like a captain. In his collar, the old tag says Wren. Wherever you go, he will count one heartbeat more.", ru: "Эш едет на твоём чемодане, как капитан. В его ошейнике старая пластинка: «Рен». Куда бы ты ни поехала — он посчитает на одно биение сердца больше." },
         { t: "Months later, an envelope arrives with no stamp. Inside is one line: \u201cThe bell remembers.\u201d", ru: "Спустя месяцы приходит конверт без марки. Внутри одна строка: «Колокол помнит»." },
         { vocab: { words: [["dawn", "рассвет"], ["melting", "тающий"], ["horn", "гудок"], ["wave", "махать"], ["enough", "достаточно"], ["remembers", "помнит"]] } },
         { end: true }

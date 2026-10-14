@@ -83,8 +83,10 @@ async function solveTask(task, doc) {
       (task.stmts[i].a ? btns[0] : btns[1]).click();
     });
   } else if (task.kind === "quiz") {
-    const wide = [...body.querySelectorAll(".mini-btn.wide")];
-    wide[task.a].click();
+    const wide = [...body.querySelectorAll(".mini-btn.wide[data-idx]")];
+    const b = wide.find((x) => x.dataset.idx === String(task.a));
+    if (!b) throw new Error("quiz option not found: idx " + task.a);
+    b.click();
   } else if (task.kind === "multi") {
     const wide = [...body.querySelectorAll(".mini-btn.wide")];
     const optBtns = wide.filter((b) => b.dataset.idx !== undefined);
@@ -128,6 +130,11 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
   let taskCyrillic = 0;
   let choiceCount = 0;
   let correctFirstCount = 0;
+  let lastChoicePos = -1;
+  let choiceSamePos = 0;
+  let quizCount = 0;
+  let lastQuizPos = -1;
+  let quizSamePos = 0;
   let nextLeak = 0;
   let musicMismatch = 0;
   let steps = 0;
@@ -153,10 +160,17 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
       if (isVocab) { vocabSeen++; }
       else if (hasCyr) { taskCyrillic++; }
       if (item && item.task) {
+        if (item.task.kind === "quiz") {
+          const wide = [...doc.getElementById("taskBody").querySelectorAll(".mini-btn.wide[data-idx]")];
+          const pos = wide.findIndex((b) => b.dataset.idx === String(item.task.a));
+          quizCount++;
+          if (pos === lastQuizPos) quizSamePos++;
+          lastQuizPos = pos;
+        }
         if (wrongFirstTask && !wrongTaskDone && item.task.kind === "quiz") {
-          const wide = [...doc.getElementById("taskBody").querySelectorAll(".mini-btn.wide")];
-          const wrongIdx = item.task.a === 0 ? 1 : 0;
-          wide[wrongIdx].click();
+          const wide = [...doc.getElementById("taskBody").querySelectorAll(".mini-btn.wide[data-idx]")];
+          const wrongBtn = wide.find((b) => b.dataset.idx !== String(item.task.a));
+          wrongBtn.click();
           await sleep(30);
           if (!$("watsonPopup").hidden) { click($("watsonClose"), "watson close"); wrongTaskDone = true; }
           await waitFor(() => $("watsonPopup").hidden && !$("taskPanel").hidden, 2000, "task panel back");
@@ -188,7 +202,10 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
       if (!correctOpt) throw new Error("choice without correct option in " + sc.id);
       const correctBtn = choiceBtns.find((b) => b.querySelector(".choice-en").textContent === correctOpt.t);
       if (!correctBtn) throw new Error("correct button not found in " + sc.id);
-      if (choiceBtns.indexOf(correctBtn) === 0) correctFirstCount++;
+      const cpos = choiceBtns.indexOf(correctBtn);
+      if (cpos === 0) correctFirstCount++;
+      if (cpos === lastChoicePos) choiceSamePos++;
+      lastChoicePos = cpos;
       if (wrongFirstChoice && !wrongChoiceDone) {
         const wrongOpt = item.opts.find((o) => !o.ok);
         const wrongBtn = choiceBtns.find((b) => b.querySelector(".choice-en").textContent === wrongOpt.t);
@@ -209,7 +226,7 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
     await sleep(20);
   }
 
-  return { window, doc, errors, BMH, visited, $, click, steps, vocabSeen, taskCyrillic, choiceCount, correctFirstCount, nextLeak, musicMismatch };
+  return { window, doc, errors, BMH, visited, $, click, steps, vocabSeen, taskCyrillic, choiceCount, correctFirstCount, choiceSamePos, quizCount, quizSamePos, nextLeak, musicMismatch };
 }
 
 (async () => {
@@ -229,6 +246,9 @@ async function playthrough({ wrongFirstChoice = false, wrongFirstTask = false, s
   check("mini-dictionaries seen and bilingual", run1.vocabSeen === 10, "vocab panels: " + run1.vocabSeen);
   check("choices shuffled (not always correct-first)", run1.choiceCount >= 9 && run1.correctFirstCount < run1.choiceCount,
     "choices=" + run1.choiceCount + " correctFirst=" + run1.correctFirstCount);
+  check("no two dialogue choices in a row at the same slot", run1.choiceSamePos === 0, "same-slot repeats: " + run1.choiceSamePos);
+  check("quizzes shuffled, no same-slot repeats", run1.quizCount >= 9 && run1.quizSamePos === 0,
+    "quizzes=" + run1.quizCount + " same-slot repeats: " + run1.quizSamePos);
   check("Next hidden while choices active (no skip)", run1.nextLeak === 0, "leaks: " + run1.nextLeak);
   check("per-chapter music follows scene", run1.musicMismatch === 0, "mismatches: " + run1.musicMismatch);
 
