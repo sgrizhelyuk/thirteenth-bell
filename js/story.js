@@ -34,7 +34,7 @@ window.STORY = {
         { sp: "Pike", t: "Last crossing tonight. Mind the tide, kid.", ru: "Последний рейс на сегодня. Следи за приливом, малыш." },
         { sp: "Nora", t: "I have a letter. Winterhollow Academy.", ru: "У меня письмо. Академия Уинтерхоллоу." },
         {
-          prompt: { sp: "Pike", t: "There is no good hour to arrive there. Tell me \u2014 do you believe in warnings?", ru: "Хорошего часа, чтобы туда приехать, не бывает. Скажи — ты веришь в предупреждения?" },
+          prompt: { sp: "Pike", t: "There is no good hour to arrive there. Tell me \u2014 do you believe in warnings?", ru: "В хороший час туда не приезжают. Скажи — ты веришь в предупреждения?" },
           opts: [
             { t: "I listen to every warning.", ru: "Я прислушиваюсь к каждому предупреждению.", ok: true, fb: "Smart. 'Listen to warnings' \u2014 a good collocation." },
             { t: "I don't believe in old stories.", ru: "Я не верю в старые истории.", fb: "Brave words. On this road, brave is expensive." },
@@ -192,7 +192,7 @@ window.STORY = {
         { note: { clue: "photo", title: "Clue found: the scratched photo", ru: "Улика: испорченное фото" }, t: "On her desk: an old photo of the school choir. One face is scratched off with a knife — so deep the paper has a hole.", ru: "На столе: старое фото школьного хора. Одно лицо выцарапано ножом — так глубоко, что в бумаге дыра." },
         { sp: "Vale", t: "They sang at the Long Bell every year. Most of them have moved away.", ru: "Они пели у Долгого Колокола каждый год. Большинство из них уехали." },
         {
-          prompt: { sp: "Vale", t: "One question, Miss Bell. Then the fire has work to do.", ru: "Один вопрос, мисс Белл. Потом у камина будет работа." },
+          prompt: { sp: "Vale", t: "One question, Miss Bell. Later, there will be work by the fireplace.", ru: "Один вопрос, мисс Белл. Потом у камина будет работа." },
           opts: [
             { t: "Who was in the photo, ma'am?", ru: "Кто был на фото, мэм?", ok: true, fb: "She smiles, which is worse. 'A voice from long ago.'" },
             { t: "What is the Long Bell?", ru: "Что такое Долгий Колокол?", fb: "Not a what. A when." },
