@@ -163,6 +163,9 @@
   }
 
   function setSprite(name, c) {
+    var prev = els.sprites.querySelector('[data-char-name="' + name + '"]');
+    if (prev && prev.getAttribute("src") === c.img) { return; }
+    if (prev && prev.parentNode) { prev.parentNode.removeChild(prev); }
     var img = document.createElement("img");
     img.className = "sprite sprite-" + (c.side || "right");
     img.src = c.img;

@@ -192,7 +192,7 @@ window.STORY = {
         { note: { clue: "photo", title: "Clue found: the scratched photo", ru: "Улика: испорченное фото" }, t: "On her desk: an old photo of the school choir. One face is scratched off with a knife — so deep the paper has a hole.", ru: "На столе: старое фото школьного хора. Одно лицо выцарапано ножом — так глубоко, что в бумаге дыра." },
         { sp: "Vale", t: "They sang at the Long Bell every year. Most of them have moved away.", ru: "Они пели у Долгого Колокола каждый год. Большинство из них уехали." },
         {
-          prompt: { sp: "Vale", t: "One question, Miss Bell. Then the fire and I have work.", ru: "Один вопрос, мисс Белл. Потом у нас с камином будет работа." },
+          prompt: { sp: "Vale", t: "One question, Miss Bell. Then the fire has work to do.", ru: "Один вопрос, мисс Белл. Потом у камина будет работа." },
           opts: [
             { t: "Who was in the photo, ma'am?", ru: "Кто был на фото, мэм?", ok: true, fb: "She smiles, which is worse. 'A voice from long ago.'" },
             { t: "What is the Long Bell?", ru: "Что такое Долгий Колокол?", fb: "Not a what. A when." },
@@ -234,12 +234,12 @@ window.STORY = {
           clues: {
             hotspots: [
               { id: "diary_page", x: 0.33, y: 0.72, w: 0.15, h: 0.14 },
-              { id: "tally_marks", x: 0.84, y: 0.14, w: 0.12, h: 0.2 },
-              { id: "old_key", x: 0.03, y: 0.55, w: 0.12, h: 0.15 }
+              { id: "tally_marks", x: 0.7, y: 0.24, w: 0.11, h: 0.16 },
+              { id: "old_key", x: 0.28, y: 0.46, w: 0.11, h: 0.13 }
             ],
             duds: [
               { x: 0.27, y: 0.6, w: 0.12, h: 0.1, msg: "Desks under sheets of dust. Nobody has sat here for a long time.", ru: "Парты под слоем пыли. Здесь давно никто не сидел." },
-              { x: 0.63, y: 0.26, w: 0.1, h: 0.14, msg: "You breathe out \u2014 the air turns to frost. Something cold stood here once. But there is nothing to take.", ru: "Ты выдыхаешь — воздух превращается в иней. Что-то холодное стояло здесь когда-то. Но взять нечего." }
+              { x: 0.52, y: 0.26, w: 0.1, h: 0.14, msg: "You breathe out \u2014 the air turns to frost. Something cold stood here once. But there is nothing to take.", ru: "Ты выдыхаешь — воздух превращается в иней. Что-то холодное стояло здесь когда-то. Но взять нечего." }
             ]
           }
         },
@@ -407,6 +407,7 @@ window.STORY = {
         { sp: "Nora", t: "You have waited here a long time, haven't you?", ru: "Ты ждёшь здесь очень давно, правда?" },
         { cast: { Visitor: { img: "assets/CH_visitor.png", side: "right" } }, t: "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move.", ru: "Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается." },
         {
+          cast: { Visitor: { img: "assets/CH_visitor.png", side: "right" } },
           prompt: { sp: "Nora", t: "(Silence. The cat's ears turn. What do you do?)", ru: "(Тишина. Уши кота поворачиваются. Что ты сделаешь?)" },
           opts: [
             { t: "Hold your breath and stay still.", ru: "Затаись и не двигайся.", ok: true, fb: "The best choices in this school are usually the quietest." },
