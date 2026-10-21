@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Thirteenth Bell — Digital Story</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-snap-type: y mandatory; background: #0c1424; }
+  body { background: #0c1424; }
+  .frame {
+    min-height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .frame img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+    display: block;
+  }
+  #progress {
+    position: fixed;
+    top: 0; left: 0;
+    height: 3px; width: 0;
+    background: linear-gradient(90deg, #d9a441, #e8c579);
+    z-index: 10;
+  }
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div class="frame"><img src="01_title.jpg" alt=""></div>
+<div class="frame"><img src="02_prologue.jpg" alt=""></div>
+<div class="frame"><img src="03_ch1_gate.jpg" alt=""></div>
+<div class="frame"><img src="04_ch2_room13.jpg" alt=""></div>
+<div class="frame"><img src="05_ch3_office.jpg" alt=""></div>
+<div class="frame"><img src="06_ch4_eastwing.jpg" alt=""></div>
+<div class="frame"><img src="07_ch5_kitchen.jpg" alt=""></div>
+<div class="frame"><img src="08_ch6_archive.jpg" alt=""></div>
+<div class="frame"><img src="09_ch7_tower.jpg" alt=""></div>
+<div class="frame"><img src="10_ch8_bell.jpg" alt=""></div>
+<div class="frame"><img src="11_epilogue.jpg" alt=""></div>
+<script>
+  var bar = document.getElementById("progress");
+  window.addEventListener("scroll", function () {
+    var m = document.documentElement;
+    var max = m.scrollHeight - m.clientHeight;
+    bar.style.width = (max > 0 ? (m.scrollTop / max) * 100 : 0) + "%";
+  }, { passive: true });
+</script>
+</body>
+</html>
