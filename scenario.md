@@ -113,7 +113,7 @@
    - ✓ "I listen to every warning." — «Я прислушиваюсь к каждому предупреждению.» · fb: "Smart. 'Listen to warnings' — good collocation."
    - ✗ "I don't believe in old stories." — «Я не верю в старые истории.» · fb: "Brave words. On this road, brave is expensive."
    - ✗ "Warnings are for children." — «Предупреждения — для детей.» · fb: "Then remember this one like a child: the bell rings thirteen times here."
-5. `[Pike]` "When the bell rings thirteen, close your eyes and do not answer. And if you see a grey cat — follow it. It knows the way out." — «Когда колокол ударит тринадцать раз — закрой глаза и не отвечай. А если увидишь серую кошку — иди за ней. Она знает дорогу.»
+5. `[Pike]` "When the bell rings thirteen, close your eyes and do not answer. And if you see a grey cat — follow it. It knows the way." — «Когда колокол ударит тринадцать раз — закрой глаза и не отвечай. А если увидишь серую кошку — иди за ней. Она знает дорогу.»
 6. `[Nora]` "Thirteen? A bell rings twelve." — «Тринадцать? Колокол звонит двенадцать раз.»
 7. `[Pike]` "Not this bell." — «Не этот колокол.»
 8. `[Pike]` "And if you hear your name tonight — it is not me calling." — «И если услышишь своё имя сегодня — это не я зову.»
@@ -144,7 +144,7 @@
 11. `[Crane]` "Five: you must never leave your room on the night of the Long Bell." — «Пятое: в ночь Долгого Колокола нельзя выходить из комнаты.»
 12. `[Nora]` "What happens if I break them?" — «Что будет, если я их нарушу?»
 13. `[Crane]` "Nothing. For a while." — «Ничего. Некоторое время.»
-14. `[Crane]` "And then you are not here." — «А потом тебя здесь не будет.»
+14. `[Crane]` "And then you will not be here." — «А потом тебя здесь не будет.»
 15. `[task|order]` "you must follow the five rules ."
 16. `[task|quiz]` "Which rule is written correctly?"
    - "If someone calls your name, you must not answer." ✓
@@ -183,7 +183,7 @@
 *Cast:* Nora (left), Vale (right)
 
 1. `[nar]` "The next morning. The headmistress’s office smells of cold paper and old wax. The fire is burning, but the room is not warm." — «На следующее утро. В кабинете директрисы пахнет холодной бумагой и старым воском. В камине горит огонь, но в комнате не тепло.»
-2. `[Vale]` "Miss Bell. My condolences on your loss. A scholarship at this hour of the year is unusual." — «Мисс Белл. Примите мои соболезнования. Стипендия в такое время года — необычно.»
+2. `[Vale]` "Miss Bell. My condolences. A scholarship at this hour of the year is unusual." — «Мисс Белл. Примите мои соболезнования. Стипендия в такое время года — необычно.»
 3. `[Vale]` "You will find that Winterhollow has five rules and one hundred and one rituals. You may forget the rituals." — «Вы обнаружите, что в Уинтерхоллоу пять правил и сто один ритуал. Ритуалы можете забыть.»
 4. `[Nora]` "And the rules?" — «А правила?»
 5. `[Vale]` "Rules are paid for, Miss Bell. Every rule here costs something." — «За правила платят, мисс Белл. Каждое правило здесь чего-то стоит.»
@@ -239,7 +239,7 @@
    - ✗ "When is the next ferry?" — «Когда следующий паром?» · fb: "Spring, child. If you are still on the list." (note the silent 'if')
 6. `[note|clue=salt_pouch]` "She fills a little cloth bag with salt and ties it tight. 'Salt at the door. Salt in your pocket. Salt in your boot if the wind is wrong.'" — Она наполняет маленький тканевый мешочек солью и крепко завязывает его: «Соль у двери. Соль в кармане. Соль в сапоге, если ветер дует не в ту сторону.»
 7. `[Poole]` "Salt at the door, salt on the stairs. The guest never crosses it." — «Соль у двери, соль на лестнице. Гость её не переступит.»
-8. `[nar]` "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth." — «Серый кот подходит и кладёт лапу тебе на руку. Его ошейник сделан из старой кожи. Латунная бирка почти стёрлась.»
+8. `[nar]` "The grey cat walks over and lays one paw on your hand. His collar is old leather. The brass tag is worn almost smooth." — «Серый кот подходит и кладёт лапу тебе на руку. Его ошейник сделан из старой кожи. Латунная бирка почти стёрлась.»
 9. `[Ash]` "Mrrrow." — «Мррряу.»
 10. `[task|quiz]` "I ___ just baked the bread for tomorrow." — "have" ✓ / "has" / "am"
 11. `[task|tf]` True or False?
@@ -254,7 +254,7 @@
 *Cast:* Nora (left), Quill (right)
 
 1. `[nar]` "The archive is one locked room behind another locked room. Mr. Quill unlocks them both with hands that shake." — «Архив — это одна запертая комната за другой запертой комнатой. Мистер Куилл дрожащими руками отпирает обе двери.»
-2. `[Quill]` "You are the Bell girl. I have already polished your file." — «Ты — та самая Белл. Я уже изучил твоё досье.»
+2. `[Quill]` "You are the Bell girl. I have already studied your file." — «Ты — та самая Белл. Я уже изучил твоё досье.»
 3. `[Nora]` "I want to see the school ledger." — «Я хочу посмотреть школьный журнал.»
 4. `[Quill]` "The ledger shows who came and who left. It does not show where. If you read it aloud, the school will hear you." — «Книга показывает, кто пришёл и кто ушёл. Она не показывает куда. Если прочтёшь её вслух — школа услышит тебя.»
 5. `[choice|Quill]` "Why do you want the old book, Miss Bell?"
@@ -331,7 +331,7 @@
 1. `[nar]` "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over — the quiet winter." — «На рассвете дамба превращается в ленту чёрной воды и тающего льда. Над озером разносится гудок парома. Зима закончилась — тихая зима.»
 2. `[June]` "You did it. You said the words." — «Ты сделала это. Ты сказала слова.»
 3. `[Crane]` (at the gate) — он молча поднимает фонарь. `[nar]` "Mr. Crane raises his lantern at the gate. He does not speak. He will not speak again — the bell, broken or not, has his voice. He waves. It is enough." — «Мистер Крейн поднимает фонарь у ворот. Он не говорит. Он больше не заговорит — колокол, сломанный или нет, забрал его голос. Он машет рукой. Этого достаточно.»
-4. `[nar]` "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be put down." — «Пальто Лены всё ещё висит в комнате 13. Некоторые вещи вернуть нельзя. С некоторыми долгами можно расплатиться.»
+4. `[nar]` "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be settled." — «Пальто Лены всё ещё висит в комнате 13. Некоторые вещи вернуть нельзя. С некоторыми долгами можно расплатиться.»
 5. `[task|quiz]` "Choose the correct ending line:"
    - "The bell has not rung since that night." ✓
    - "The bell did not rang since that night."

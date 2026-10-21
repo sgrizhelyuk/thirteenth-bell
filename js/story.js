@@ -2,7 +2,7 @@
 // A mystical horror English quest. Level A2–B1.
 
 window.CLUES = {
-  photo: { name: "Scratched photo", ru: "Испорченное фото", img: "assets/OBJ_scratched_photo.png", note: "One face crossed out with ink" },
+  photo: { name: "Scratched photo", ru: "Испорченное фото", img: "assets/OBJ_scratched_photo.png", note: "One face scratched off with a knife" },
   diary_page: { name: "Diary page", ru: "Страница дневника", img: "assets/OBJ_diary_page.png", note: "\u201cThey count us, June.\u201d" },
   tally_marks: { name: "Chalk tally marks", ru: "Метки мелом", img: "assets/OBJ_tally_marks.png", note: "Rows and rows of small lines" },
   old_key: { name: "Old iron key", ru: "Старый железный ключ", img: "assets/OBJ_iron_key.png", note: "Sewn into a winter coat" },
@@ -41,7 +41,7 @@ window.STORY = {
             { t: "Warnings are for children.", ru: "Предупреждения — для детей.", fb: "Then remember this one like a child: the bell rings thirteen times here." }
           ]
         },
-        { sp: "Pike", t: "When the bell rings thirteen, close your eyes and do not answer. And if you see a grey cat — follow it. It knows the way out.", ru: "Когда колокол ударит тринадцать раз — закрой глаза и не отвечай. А если увидишь серую кошку — иди за ней. Она знает дорогу." },
+        { sp: "Pike", t: "When the bell rings thirteen, close your eyes and do not answer. And if you see a grey cat — follow it. It knows the way.", ru: "Когда колокол ударит тринадцать раз — закрой глаза и не отвечай. А если увидишь серую кошку — иди за ней. Она знает дорогу." },
         { sp: "Nora", t: "Thirteen? A bell rings twelve.", ru: "Тринадцать? Колокол звонит двенадцать раз." },
         { sp: "Pike", t: "Not this bell.", ru: "Не этот колокол." },
         { sp: "Pike", t: "And if you hear your name tonight \u2014 it is not me calling.", ru: "И если услышишь своё имя сегодня — это не я зову." },
@@ -89,7 +89,7 @@ window.STORY = {
         { sp: "Crane", t: "Five: you must never leave your room on the night of the Long Bell.", ru: "Пятое: в ночь Долгого Колокола нельзя выходить из комнаты." },
         { sp: "Nora", t: "What happens if I break them?", ru: "Что будет, если я их нарушу?" },
         { sp: "Crane", t: "Nothing. For a while.", ru: "Ничего. Некоторое время." },
-        { sp: "Crane", t: "And then you are not here.", ru: "А потом тебя здесь не будет." },
+        { sp: "Crane", t: "And then you will not be here.", ru: "А потом тебя здесь не будет." },
         {
           task: {
             kind: "order", title: "Put the words in order", ru: "Расставь слова по порядку",
@@ -180,7 +180,7 @@ window.STORY = {
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Vale: { img: "assets/CH_vale.png", side: "right" } },
       items: [
         { t: "The next morning. The headmistress’s office smells of cold paper and old wax. The fire is burning, but the room is not warm.", ru: "На следующее утро. В кабинете директрисы пахнет холодной бумагой и старым воском. В камине горит огонь, но в комнате не тепло." },
-        { sp: "Vale", t: "Miss Bell. My condolences on your loss. A scholarship at this hour of the year is unusual.", ru: "Мисс Белл. Примите мои соболезнования. Стипендия в такое время года — необычно." },
+        { sp: "Vale", t: "Miss Bell. My condolences. A scholarship at this hour of the year is unusual.", ru: "Мисс Белл. Примите мои соболезнования. Стипендия в такое время года — необычно." },
         { sp: "Vale", t: "You will find that Winterhollow has five rules and one hundred and one rituals. You may forget the rituals.", ru: "Вы обнаружите, что в Уинтерхоллоу пять правил и сто один ритуал. Ритуалы можете забыть." },
         { sp: "Nora", t: "And the rules?", ru: "А правила?" },
         { sp: "Vale", t: "Rules are paid for, Miss Bell. Every rule here costs something.", ru: "За правила платят, мисс Белл. Каждое правило здесь чего-то стоит." },
@@ -309,7 +309,7 @@ window.STORY = {
         },
         { note: { clue: "salt_pouch", title: "Clue found: the salt pouch", ru: "Улика: мешочек с солью" }, t: "She fills a little cloth bag with salt and ties it tight. “Salt at the door. Salt in your pocket. Salt in your boot if the wind is wrong.”", ru: "Она наполняет маленький тканевый мешочек солью и крепко завязывает его: «Соль у двери. Соль в кармане. Соль в сапоге, если ветер дует не в ту сторону.»" },
         { sp: "Poole", t: "Salt at the door, salt on the stairs. The guest never crosses it.", ru: "Соль у двери, соль на лестнице. Гость её не переступит." },
-        { t: "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth.", ru: "Серый кот подходит и кладёт лапу тебе на руку. Его ошейник сделан из старой кожи. Латунная бирка почти стёрлась." },
+        { t: "The grey cat walks over and lays one paw on your hand. His collar is old leather. The brass tag is worn almost smooth.", ru: "Серый кот подходит и кладёт лапу тебе на руку. Его ошейник сделан из старой кожи. Латунная бирка почти стёрлась." },
         { sp: "Ash", t: "Mrrrow.", ru: "Мррряу." },
         {
           task: {
@@ -350,7 +350,7 @@ window.STORY = {
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, Quill: { img: "assets/CH_quill.png", side: "right" } },
       items: [
         { t: "The archive is one locked room behind another locked room. Mr. Quill unlocks them both with hands that shake.", ru: "Архив — это одна запертая комната за другой запертой комнатой. Мистер Куилл дрожащими руками отпирает обе двери." },
-        { sp: "Quill", t: "You are the Bell girl. I have already polished your file.", ru: "Ты — та самая Белл. Я уже изучил твоё досье." },
+        { sp: "Quill", t: "You are the Bell girl. I have already studied your file.", ru: "Ты — та самая Белл. Я уже изучил твоё досье." },
         { sp: "Nora", t: "I want to see the school ledger.", ru: "Я хочу посмотреть школьный журнал." },
         { sp: "Quill", t: "The ledger shows who came and who left. It does not show where. If you read it aloud, the school will hear you.", ru: "Книга показывает, кто пришёл и кто ушёл. Она не показывает куда. Если прочтёшь её вслух — школа услышит тебя." },
         {
@@ -525,7 +525,7 @@ window.STORY = {
         { t: "At dawn the causeway is a ribbon of black water and melting ice. The ferry horn sounds across the lake. Winter is over \u2014 the quiet winter.", ru: "На рассвете дамба превращается в ленту чёрной воды и тающего льда. Над озером разносится гудок парома. Зима закончилась — тихая зима." },
         { sp: "June", t: "You did it. You said the words.", ru: "Ты сделала это. Ты сказала слова." },
         { t: "Mr. Crane raises his lantern at the gate. He does not speak. He will not speak again \u2014 the bell, broken or not, has his voice. He waves. It is enough.", ru: "Мистер Крейн поднимает фонарь у ворот. Он не говорит. Он больше не заговорит — колокол, сломанный или нет, забрал его голос. Он машет рукой. Этого достаточно." },
-        { t: "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be put down.", ru: "Пальто Лены всё ещё висит в комнате 13. Некоторые вещи вернуть нельзя. С некоторыми долгами можно расплатиться." },
+        { t: "Lena's coat still hangs in room 13. Some things cannot be returned. Some debts can be settled.", ru: "Пальто Лены всё ещё висит в комнате 13. Некоторые вещи вернуть нельзя. С некоторыми долгами можно расплатиться." },
         {
           task: {
             kind: "quiz", title: "Present Perfect", ru: "Present Perfect",
