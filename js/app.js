@@ -137,7 +137,7 @@
     var sc = SCENES[state.scene];
     if (!sc) { endGame(); return; }
     els.chapterLabel.textContent = sc.chapter + " · " + sc.title;
-    chapterCard(sc.chapter + " — " + sc.title);
+    chapterCard(sc.chapter + " — " + sc.title, sc.objective, sc.objectiveRu);
     playMusic(sc.music, 1400);
     clearHotspots();
     els.taskPanel.hidden = true;
@@ -156,10 +156,21 @@
     });
   }
 
-  function chapterCard(text) {
-    els.chapterCard.textContent = text;
+  function chapterCard(text, objEn, objRu) {
+    els.chapterCard.innerHTML = "";
+    var t = document.createElement("div");
+    t.className = "cc-title";
+    t.textContent = text;
+    els.chapterCard.appendChild(t);
+    var obj = state.lang === "both" && objRu ? objRu : objEn;
+    if (obj) {
+      var o = document.createElement("div");
+      o.className = "cc-obj";
+      o.textContent = obj;
+      els.chapterCard.appendChild(o);
+    }
     els.chapterCard.classList.add("show");
-    setTimeout(function () { els.chapterCard.classList.remove("show"); }, 1800);
+    setTimeout(function () { els.chapterCard.classList.remove("show"); }, 4200);
   }
 
   function setSprite(name, c) {
@@ -853,7 +864,7 @@
     els.toast.className = "toast " + (kind || "");
     els.toast.hidden = false;
     if (toastTimer) { clearTimeout(toastTimer); }
-    toastTimer = setTimeout(function () { els.toast.hidden = true; }, 2600);
+    toastTimer = setTimeout(function () { els.toast.hidden = true; }, Math.min(9000, 3600 + String(msg || "").length * 45));
   }
 
   /* ---------------- language ---------------- */

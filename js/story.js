@@ -89,7 +89,7 @@ window.STORY = {
         { sp: "Crane", t: "Five: you must never leave your room on the night of the Long Bell.", ru: "Пятое: в ночь Долгого Колокола нельзя выходить из комнаты." },
         { sp: "Nora", t: "What happens if I break them?", ru: "Что будет, если я их нарушу?" },
         { sp: "Crane", t: "Nothing. For a while.", ru: "Ничего. Некоторое время." },
-        { sp: "Crane", t: "And then you are not here.", ru: "А потом тебя здесь нет." },
+        { sp: "Crane", t: "And then you are not here.", ru: "А потом тебя здесь не будет." },
         {
           task: {
             kind: "order", title: "Put the words in order", ru: "Расставь слова по порядку",
@@ -117,26 +117,27 @@ window.STORY = {
       id: "ch2",
       chapter: "Chapter 2",
       title: "Room 13",
-      objective: "Ask June about the room and the girl who left it.",
-      objectiveRu: "Расспроси Джун о комнате и о девочке, которая её оставила.",
+      objective: "Ask June about the room and the missing girl.",
+      objectiveRu: "Расспроси Джун о комнате и о пропавшей девочке.",
       bg: "assets/BG_room13.png",
       music: "mystery",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "right" } },
       items: [
-        { t: "Your room is at the end of the west corridor. The brass number says 13. The girl inside is awake, pretending not to be.", ru: "Твоя комната в конце западного коридора. Латунная цифра на двери — 13. Девочка внутри не спит, но делает вид, что спит." },
+        { t: "Your room is at the end of the west corridor. The brass number says 13. The girl inside is awake.", ru: "Твоя комната в конце западного коридора. Латунная цифра на двери — 13. Девочка внутри не спит." },
         { sp: "June", t: "You are the new one. Nora Bell. Here everyone is called by their full name. Like a list.", ru: "Ты новенькая. Нора Белл. Здесь всех называют по имени и фамилии. Как в списке." },
-        { sp: "Nora", t: "You waited up for me.", ru: "Ты меня дождалась." },
-        { sp: "June", t: "Now I wait every night. An old habit of this room.", ru: "Теперь я жду каждую ночь. Старая привычка этой комнаты." },
+        { sp: "Nora", t: "Were you waiting for me?", ru: "Ты меня ждала?" },
+        { sp: "June", t: "Yes. New students are rare at this school.", ru: "Да, новые ученики в этой школе бывают не часто." },
         {
-          prompt: { sp: "June", t: "Quick \u2014 what did Crane tell you at the gate?", ru: "Быстро — что Крейн сказал тебе у ворот?" },
+          prompt: { sp: "June", t: "What did Crane tell you at the gate?", ru: "Что Крейн сказал тебе у ворот?" },
           opts: [
             { t: "Five rules. I remember all of them.", ru: "Пять правил. Я помню все.", ok: true, fb: "Good. Here, memory is a life skill." },
             { t: "He told me a lot of strange stories.", ru: "Он рассказал мне много странных историй.", fb: "Crane talks? Then you have heard more than most." },
             { t: "Nothing important.", ru: "Ничего важного.", fb: "Here, 'important' means something different." }
           ]
         },
-        { sp: "June", t: "Lena lived here before you. She has left her diary, her lamp, her winter coat. People who leave take their things.", ru: "До тебя здесь жила Лена. Она оставила дневник, лампу, зимнее пальто. Кто уезжает — забирает свои вещи." },
+        { sp: "June", t: "Lena lived here before you. She has left her diary, her lamp, her winter coat. But usually, people who leave take their things.", ru: "До тебя здесь жила Лена. Она оставила дневник, лампу, зимнее пальто, но обычно тот, кто уезжает — забирает свои вещи." },
         { sp: "Nora", t: "Where has she gone?", ru: "Куда она уехала?" },
+        { sp: "June", t: "She didn't leave — she disappeared. In winter. Nobody leaves in winter.", ru: "Она не уехала, она исчезла. Зимой. Зимой отсюда не уезжают." },
         { sp: "June", t: "The letter says she has moved to a school in the south. The letter came two days after she was gone.", ru: "В письме сказано, что она перевелась в школу на юге. Письмо пришло через два дня после того, как она исчезла." },
         {
           task: {
@@ -194,9 +195,9 @@ window.STORY = {
         { note: { clue: "photo", title: "Clue found: the scratched photo", ru: "Улика: испорченное фото" }, t: "On her desk: an old photo of the school choir. One face is scratched off with a knife — so deep the paper has a hole.", ru: "На столе: старое фото школьного хора. Одно лицо выцарапано ножом — так глубоко, что в бумаге дыра." },
         { sp: "Vale", t: "They sang at the Long Bell every year. Most of them have moved away.", ru: "Они пели у Долгого Колокола каждый год. Большинство из них уехали." },
         {
-          prompt: { sp: "Vale", t: "One question, Miss Bell. Later, there will be work by the fireplace.", ru: "Один вопрос, мисс Белл. Потом у камина будет работа." },
+          prompt: { sp: "Vale", t: "One question, Miss Bell. Then I have work to do.", ru: "Один вопрос, мисс Белл. Потом мне надо работать." },
           opts: [
-            { t: "Who was in the photo, ma'am?", ru: "Кто был на фото, мэм?", ok: true, fb: "She smiles, which is worse. 'A voice from long ago.'" },
+            { t: "Who is in this photo, ma'am?", ru: "Кто на этой фотографии, мэм?", ok: true, fb: "She smiles, which is worse. 'A voice from long ago.'" },
             { t: "What is the Long Bell?", ru: "Что такое Долгий Колокол?", fb: "Not a what. A when." },
             { t: "Can I call my friend?", ru: "Можно я позвоню подруге?", fb: "From here? Letters only. And letters go through me." }
           ]
@@ -232,7 +233,7 @@ window.STORY = {
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "right" } },
       items: [
         { t: "After lessons and tea, June takes you to the east wing. “The classroom where Lena studied,” she whispers. “Be careful — the third step.”", ru: "После уроков и чая Джун ведёт тебя в восточное крыло. «Класс, в котором училась Лена, — шепчет она. — Осторожно, третья ступенька.»" },
-        { sp: "June", t: "Her desk, her chalk, her secret places. Look \u2014 and keep your voice down.", ru: "Её парта, её мел, её тайные места. Смотри — и говори тише." },
+        { sp: "June", t: "Her desk, her secret places. Look \u2014 and keep your voice down.", ru: "Её парта, её тайные места. Смотри — и говори тише." },
         {
           clues: {
             hotspots: [
@@ -297,16 +298,17 @@ window.STORY = {
         { t: "The kitchen is the only warm room in Winterhollow. Juniper, salt and smoke. A grey cat sits on the flour bin like he owns the building.", ru: "Кухня — единственная тёплая комната в Уинтерхоллоу. Можжевельник, соль и дым. Серый кот сидит на ящике с мукой, как будто дом принадлежит ему." },
         { sp: "Poole", t: "Sit, girl. Have you eaten? You have just arrived, and you have already seen the east wing. I know that face.", ru: "Садись, девочка. Ты ела? Ты только приехала — и уже побывала в восточном крыле. Я знаю это лицо." },
         { sp: "Nora", t: "You know what is happening here.", ru: "Вы знаете, что здесь происходит." },
-        { sp: "Poole", t: "I have cooked here for forty years. I have never once met a spring without a small funeral of words.", ru: "Я готовлю здесь сорок лет. Я ни разу не встретила весну без маленьких похорон из слов." },
+        { sp: "Poole", t: "I have cooked here for forty years. I have never once met a spring without a small funeral.", ru: "Я готовлю здесь сорок лет. Я ни разу не встретила весну без маленьких похорон." },
         {
           prompt: { sp: "Poole", t: "Choose your question carefully, girl. Some answers bite.", ru: "Выбирай вопрос осторожно, девочка. Некоторые ответы кусаются." },
           opts: [
-            { t: "What happens on the night of the Long Bell?", ru: "Что происходит в ночь Долгого Колокола?", ok: true, fb: "She puts salt in your pocket. 'The bell takes a voice. One voice. Every winter.'" },
+            { t: "What happens on the night of the Long Bell?", ru: "Что происходит в ночь Долгого Колокола?", ok: true, fb: "She puts salt in your pocket. 'The bell takes a voice. One voice. Every winter.' The bell keeps the voice. The guest takes the student." },
             { t: "Is there a ghost in the tower?", ru: "В башне есть призрак?", fb: "Ghost? No. A guest. And guests must be answered." },
             { t: "When is the next ferry?", ru: "Когда следующий паром?", fb: "Spring, child. If you are still on the list." }
           ]
         },
         { note: { clue: "salt_pouch", title: "Clue found: the salt pouch", ru: "Улика: мешочек с солью" }, t: "She fills a little cloth bag with salt and ties it tight. “Salt at the door. Salt in your pocket. Salt in your boot if the wind is wrong.”", ru: "Она наполняет маленький тканевый мешочек солью и крепко завязывает его: «Соль у двери. Соль в кармане. Соль в сапоге, если ветер дует не в ту сторону.»" },
+        { sp: "Poole", t: "Salt at the door, salt on the stairs. The guest never crosses it.", ru: "Соль у двери, соль на лестнице. Гость её не переступит." },
         { t: "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth.", ru: "Серый кот подходит и кладёт лапу тебе на руку. Его ошейник сделан из старой кожи. Латунная бирка почти стёрлась." },
         { sp: "Ash", t: "Mrrrow.", ru: "Мррряу." },
         {
@@ -360,6 +362,7 @@ window.STORY = {
           ]
         },
         { note: { clue: "ledger_page", title: "Clue found: the ledger page", ru: "Улика: страница книги записей" }, t: "The last page is yesterday’s ink: “N. Bell — voce.” A line above it: “L. Marsh — transferred.” An older line, in different ink: “Wren — taken.”", ru: "Последняя страница — вчерашние чернила: «Н. Белл — голос». Строкой выше: «Л. Марш — переведена». Старая строка, другими чернилами: «Рен — забрана»." },
+        { sp: "Nora", t: "Wren was taken. Lena was transferred. I am the voice.", ru: "Рен забрали. Лену «перевели». А я — голос." },
         { sp: "Quill", t: "If the name is written down, the bell will find the voice.", ru: "Если имя записано — колокол найдёт голос." },
         {
           task: {
@@ -408,7 +411,7 @@ window.STORY = {
         { t: "By a hook on the wall hangs a child's coat, tiny against the stone. A name is sewn inside: Wren.", ru: "На крюке у стены висит детское пальто — крошечное на фоне камня. Внутри вшито имя: Рен." },
         { note: { clue: "cat_tag", title: "Clue found: the brass tag", ru: "Улика: латунная пластинка" }, t: "Ash lets you read his tag at last: “Wren”. The letters are worn almost smooth. He has waited a long time.", ru: "Эш наконец-то позволяет прочитать свою бирку: «Рен». Буквы стёрлись почти до блеска. Он долго ждал." },
         { sp: "Nora", t: "You have waited here a long time, haven't you?", ru: "Ты ждёшь здесь очень давно, правда?" },
-        { cast: { Visitor: { img: "assets/CH_visitor.png", side: "right" } }, t: "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move.", ru: "Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается." },
+        { cast: { Visitor: { img: "assets/CH_visitor.png", side: "right" } }, t: "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move. A thin white line crosses the bottom step. The figure stops at it.", ru: "Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается. Тонкая белая полоса тянется по нижней ступени. Фигура останавливается перед ней." },
         {
           cast: { Visitor: { img: "assets/CH_visitor.png", side: "right" } },
           prompt: { sp: "Nora", t: "(Silence. The cat's ears turn. What do you do?)", ru: "(Тишина. Уши кота поворачиваются. Что ты сделаешь?)" },
@@ -457,10 +460,12 @@ window.STORY = {
       music: "climax",
       cast: { Nora: { img: "assets/CH_nora.png", side: "left" }, June: { img: "assets/CH_june.png", side: "center" }, Crane: { img: "assets/CH_crane.png", side: "right" } },
       items: [
-        { t: "June waits at the tower door with a candle and a stolen key. Behind her stands Mr. Crane with his lantern. He looks ten years older.", ru: "Джун ждёт у двери башни со свечой и украденным ключом. За ней — мистер Крейн с фонарём. Он выглядит на десять лет старше." },
+        { t: "June waits at the tower door with a candle and Lena's key. Behind her stands Mr. Crane with his lantern. He looks ten years older.", ru: "Джун ждёт у двери башни со свечой и ключом Лены. За ней — мистер Крейн с фонарём. Он выглядит на десять лет старше." },
         { sp: "Crane", t: "Vale is coming. The Long Bell is at three. She will read the names aloud, and the bell will answer.", ru: "Скоро придёт Вейл. Долгий Колокол — в три. Она прочтёт имена вслух, и колокол ответит." },
         { sp: "June", t: "Lena's name is in that book. And yours is next, Nora.", ru: "Имя Лены в той книге. А твоё — следующее, Нора." },
-        { sp: "Crane", t: "There is one way. Break the bell, burn the old page \u2014 but the debt looks for a keeper. Someone must stay. And the bell will take his voice.", ru: "Есть один способ. Разбей колокол, сожги старую страницу — но долг ищет хранителя. Кто-то должен остаться. И колокол заберёт его голос." },
+        { sp: "June", t: "Lena cut the rope. The bell rang anyway.", ru: "Лена перерезала верёвку. Колокол всё равно звонил." },
+        { sp: "Crane", t: "There is one way. Burn the page from the ledger \u2014 but the debt looks for a keeper. Someone must stay. And the bell will take his voice.", ru: "Есть один способ. Сожги страницу книги записей — но долг ищет хранителя. Кто-то должен остаться. И колокол заберёт его голос." },
+        { sp: "Crane", t: "Wren was my daughter. The bell took her voice, and the guest took Wren herself. It will not take another.", ru: "Рен была моей дочерью. Колокол забрал её голос, а гость забрал саму Рен. Больше он не заберёт никого." },
         {
           prompt: { sp: "Crane", t: "When it calls your name, girl \u2014 what will you say?", ru: "Когда он позовёт твоё имя, девочка — что ты скажешь?" },
           opts: [
@@ -533,7 +538,7 @@ window.STORY = {
             why: "Present Perfect with 'since' for a state from the past until now: has not rung since that night."
           }
         },
-        { t: "Ash rides on your suitcase like a captain. There’s an old tag on his collar that says “Wren.” Wherever you go, he will be with you.", ru: "Эш едет на твоём чемодане, как капитан. На его ошейнике старая бирка с надписью «Рен». Куда бы ты ни поехала — он будет с тобой." },
+        { t: "Ash rides on your suitcase like a captain. There’s an old tag on his collar that says “Wren.” Wherever you go, he will be with you. He waited for one girl. He walks with another.", ru: "Эш едет на твоём чемодане, как капитан. На его ошейнике старая бирка с надписью «Рен». Куда бы ты ни поехала — он будет с тобой. Он ждал одну девочку. Провожает — другую." },
         { t: "Months later, an envelope arrives with no stamp. Inside is one line: \u201cThe bell remembers.\u201d", ru: "Спустя месяцы приходит конверт без марки. Внутри одна строка: «Колокол помнит»." },
         { vocab: { words: [["dawn", "рассвет"], ["melting", "тающий"], ["horn", "гудок"], ["wave", "махать"], ["enough", "достаточно"], ["remembers", "помнит"]] } },
         { end: true }

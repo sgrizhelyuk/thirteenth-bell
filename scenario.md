@@ -144,7 +144,7 @@
 11. `[Crane]` "Five: you must never leave your room on the night of the Long Bell." — «Пятое: в ночь Долгого Колокола нельзя выходить из комнаты.»
 12. `[Nora]` "What happens if I break them?" — «Что будет, если я их нарушу?»
 13. `[Crane]` "Nothing. For a while." — «Ничего. Некоторое время.»
-14. `[Crane]` "And then you are not here." — «А потом тебя здесь нет.»
+14. `[Crane]` "And then you are not here." — «А потом тебя здесь не будет.»
 15. `[task|order]` "you must follow the five rules ."
 16. `[task|quiz]` "Which rule is written correctly?"
    - "If someone calls your name, you must not answer." ✓
@@ -153,28 +153,29 @@
 17. `[vocab]` gate — ворота; rules — правила; by heart — наизусть; lantern — фонарь; tower — башня; step through — войти.
 
 ### Chapter 2 — Room 13
-*Objective:* Ask June about the room and the girl who left it. / *Расспроси Джун о комнате и о девочке, которая её оставила.*
+*Objective:* Ask June about the room and the missing girl. / *Расспроси Джун о комнате и о пропавшей девочке.*
 *BG:* dormitory room 13, one lamp / *Music:* mystery
 *Cast:* Nora (left), June (right)
 
-1. `[nar]` "Your room is at the end of the west corridor. The brass number says 13. The girl inside is awake, pretending not to be." — «Твоя комната в конце западного коридора. Латунная цифра на двери — 13. Девочка внутри не спит, но делает вид, что спит.»
+1. `[nar]` "Your room is at the end of the west corridor. The brass number says 13. The girl inside is awake." — «Твоя комната в конце западного коридора. Латунная цифра на двери — 13. Девочка внутри не спит.»
 2. `[June]` "You are the new one. Nora Bell. Here everyone is called by their full name. Like a list." — «Ты новенькая. Нора Белл. Здесь всех называют по имени и фамилии. Как в списке.»
-3. `[Nora]` "You waited up for me." — «Ты меня дождалась.»
-4. `[June]` "Now I wait every night. An old habit of this room." — «Теперь я жду каждую ночь. Старая привычка этой комнаты.»
-5. `[choice|June]` "Quick — what did Crane tell you at the gate?"
+3. `[Nora]` "Were you waiting for me?" — «Ты меня ждала?»
+4. `[June]` "Yes. New students are rare at this school." — «Да, новые ученики в этой школе бывают не часто.»
+5. `[choice|June]` "What did Crane tell you at the gate?"
    - ✓ "Five rules. I remember all of them." — «Пять правил. Я помню все.» · fb: "Good. Here, memory is a life skill."
    - ✗ "He told me a lot of strange stories." — «Он рассказал мне много странных историй.» · fb: "Crane talks? Then you have heard more than most."
    - ✗ "Nothing important." — «Ничего важного.» · fb: "Here, 'important' means something different."
-6. `[June]` "Lena lived here before you. She has left her diary, her lamp, her winter coat. People who leave take their things." — «До тебя здесь жила Лена. Она оставила дневник, лампу, зимнее пальто. Кто уезжает — забирает свои вещи.»
+6. `[June]` "Lena lived here before you. She has left her diary, her lamp, her winter coat. But usually, people who leave take their things." — «До тебя здесь жила Лена. Она оставила дневник, лампу, зимнее пальто, но обычно тот, кто уезжает — забирает свои вещи.»
 7. `[Nora]` "Where has she gone?" — «Куда она уехала?»
-8. `[June]` "The letter says she has moved to a school in the south. The letter came two days after she was gone." — «В письме сказано, что она перевелась в школу на юге. Письмо пришло через два дня после того, как она исчезла.»
-9. `[task|quiz]` "She ___ her diary in the room." — "has left" ✓ / "have left" / "has leaved"
-10. `[task|quiz]` "The letter ___ two days later." — "came" ✓ / "has come" / "comes"
-11. `[task|tf]` True or False?
+8. `[June]` "She didn't leave — she disappeared. In winter. Nobody leaves in winter." — «Она не уехала, она исчезла. Зимой. Зимой отсюда не уезжают.»
+9. `[June]` "The letter says she has moved to a school in the south. The letter came two days after she was gone." — «В письме сказано, что она перевелась в школу на юге. Письмо пришло через два дня после того, как она исчезла.»
+10. `[task|quiz]` "She ___ her diary in the room." — "has left" ✓ / "have left" / "has leaved"
+11. `[task|quiz]` "The letter ___ two days later." — "came" ✓ / "has come" / "comes"
+12. `[task|tf]` True or False?
     - "June believes the letter about Lena." — false
     - "Lena left her winter coat." — true
-12. `[nar]` "Outside, snow taps the window. For one second the tapping sounds like ten small fingers." — «Снаружи в окно стучит снег. На секунду стук становится похож на прикосновение десяти маленьких пальчиков.»
-13. `[vocab]` roommate — соседка по комнате; count — считать; leave/left — оставить/уехать; moved — переехала; coat — пальто; two days later — через два дня.
+13. `[nar]` "Outside, snow taps the window. For one second the tapping sounds like ten small fingers." — «Снаружи в окно стучит снег. На секунду стук становится похож на прикосновение десяти маленьких пальчиков.»
+14. `[vocab]` roommate — соседка по комнате; count — считать; leave/left — оставить/уехать; moved — переехала; coat — пальто; two days later — через два дня.
 
 ### Chapter 3 — Paper and Wax
 *Objective:* Survive your first interview with the headmistress. / *Выдержи первый разговор с директрисой.*
@@ -192,8 +193,8 @@
    - ✗ "I don't know. It was your choice." — «Я не знаю. Это был ваш выбор.» · fb: "Careful. Clever answers are expensive in this office."
 7. `[note|clue=photo]` "On her desk: an old photo of the school choir. One face is scratched off with a knife — so deep the paper has a hole." — «На столе: старое фото школьного хора. Одно лицо выцарапано ножом — так глубоко, что в бумаге дыра.»
 8. `[Vale]` "They sang at the Long Bell every year. Most of them have moved away." — «Они пели у Долгого Колокола каждый год. Большинство из них уехали.»
-9. `[choice|Vale]` "One question, Miss Bell. Later, there will be work by the fireplace." — «Один вопрос, мисс Белл. Потом у камина будет работа.»
-   - ✓ "Who was in the photo, ma'am?" — «Кто был на фото, мэм?» · fb: "She smiles, which is worse. 'A voice from long ago.'"
+9. `[choice|Vale]` "One question, Miss Bell. Then I have work to do." — «Один вопрос, мисс Белл. Потом мне надо работать.»
+   - ✓ "Who is in this photo, ma'am?" — «Кто на этой фотографии, мэм?» · fb: "She smiles, which is worse. 'A voice from long ago.'"
    - ✗ "What is the Long Bell?" — «Что такое Долгий Колокол?» · fb: "Not a what. A when."
    - ✗ "Can I call my friend?" — «Можно я позвоню подруге?» · fb: "From here? Letters only. And letters go through me."
 10. `[nar]` "The headmistress smiles but does not answer the question, silently pointing to the door." — «Директриса улыбается, но не отвечает на вопрос, молча указывая на дверь.»
@@ -207,7 +208,7 @@
 *Cast:* Nora (left), June (right)
 
 1. `[nar]` "After lessons and tea, June takes you to the east wing. “The classroom where Lena studied,” she whispers. “Be careful — the third step.”" — «После уроков и чая Джун ведёт тебя в восточное крыло. «Класс, в котором училась Лена, — шепчет она. — Осторожно, третья ступенька.»»
-2. `[June]` "Her desk, her chalk, her secret places. Look — and keep your voice down." — «Её парта, её мел, её тайные места. Смотри — и говори тише.»
+2. `[June]` "Her desk, her secret places. Look — and keep your voice down." — «Её парта, её тайные места. Смотри — и говори тише.»
 3. `[clues|hotspots]` Magnifying-glass search (3 clue-зоны + 2 flavor-зоны):
    - **diary_page** — in the desk: "They count us, June. Tell no one. — L."
    - **tally_marks** — chalk marks behind the wardrobe: rows and rows of small lines
@@ -231,20 +232,21 @@
 1. `[nar]` "The kitchen is the only warm room in Winterhollow. Juniper, salt and smoke. A grey cat sits on the flour bin like he owns the building." — «Кухня — единственная тёплая комната в Уинтерхоллоу. Можжевельник, соль и дым. Серый кот сидит на ящике с мукой, как будто дом принадлежит ему.»
 2. `[Poole]` "Sit, girl. Have you eaten? You have just arrived, and you have already seen the east wing. I know that face." — «Садись, девочка. Ты ела? Ты только приехала — и уже побывала в восточном крыле. Я знаю это лицо.»
 3. `[Nora]` "You know what is happening here." — «Вы знаете, что здесь происходит.»
-4. `[Poole]` "I have cooked here for forty years. I have never once met a spring without a small funeral of words." — «Я готовлю здесь сорок лет. Я ни разу не встретила весну без маленьких похорон из слов.»
+4. `[Poole]` "I have cooked here for forty years. I have never once met a spring without a small funeral." — «Я готовлю здесь сорок лет. Я ни разу не встретила весну без маленьких похорон.»
 5. `[choice|Poole]` "Choose your question carefully, girl. Some answers bite."
-   - ✓ "What happens on the night of the Long Bell?" — «Что происходит в ночь Долгого Колокола?» · fb: "She puts salt in your pocket. 'The bell takes a voice. One voice. Every winter.'"
+   - ✓ "What happens on the night of the Long Bell?" — «Что происходит в ночь Долгого Колокола?» · fb: "She puts salt in your pocket. 'The bell takes a voice. One voice. Every winter.' The bell keeps the voice. The guest takes the student."
    - ✗ "Is there a ghost in the tower?" — «В башне есть призрак?» · fb: "Ghost? No. A guest. And guests must be answered."
    - ✗ "When is the next ferry?" — «Когда следующий паром?» · fb: "Spring, child. If you are still on the list." (note the silent 'if')
 6. `[note|clue=salt_pouch]` "She fills a little cloth bag with salt and ties it tight. 'Salt at the door. Salt in your pocket. Salt in your boot if the wind is wrong.'" — Она наполняет маленький тканевый мешочек солью и крепко завязывает его: «Соль у двери. Соль в кармане. Соль в сапоге, если ветер дует не в ту сторону.»
-7. `[nar]` "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth." — «Серый кот подходит и кладёт лапу тебе на руку. Его ошейник сделан из старой кожи. Латунная бирка почти стёрлась.»
-8. `[Ash]` "Mrrrow." — «Мррряу.»
-9. `[task|quiz]` "I ___ just baked the bread for tomorrow." — "have" ✓ / "has" / "am"
-10. `[task|tf]` True or False?
-   - "Mrs. Poole has worked here for forty years." — true
-   - "The cat is afraid of the kitchen." — false
-11. `[task|order]` "the bell remembers every voice ."
-12. `[vocab]` stove — печь; salt — соль; juniper — можжевельник; funeral — похороны; voice — голос; remember — помнить.
+7. `[Poole]` "Salt at the door, salt on the stairs. The guest never crosses it." — «Соль у двери, соль на лестнице. Гость её не переступит.»
+8. `[nar]` "The grey cat walks over and presses one paw to your hand. His collar is old leather. The brass tag is worn almost smooth." — «Серый кот подходит и кладёт лапу тебе на руку. Его ошейник сделан из старой кожи. Латунная бирка почти стёрлась.»
+9. `[Ash]` "Mrrrow." — «Мррряу.»
+10. `[task|quiz]` "I ___ just baked the bread for tomorrow." — "have" ✓ / "has" / "am"
+11. `[task|tf]` True or False?
+    - "Mrs. Poole has worked here for forty years." — true
+    - "The cat is afraid of the kitchen." — false
+12. `[task|order]` "the bell remembers every voice ."
+13. `[vocab]` stove — печь; salt — соль; juniper — можжевельник; funeral — похороны; voice — голос; remember — помнить.
 
 ### Chapter 6 — The Ledger
 *Objective:* Find the old book — and your own name. / *Найди старую книгу — и своё имя.*
@@ -260,16 +262,17 @@
    - ✗ "I want to see my name." — «Я хочу увидеть своё имя.» · fb: "You have just said something dangerous."
    - ✗ "June told me to." — «Джун попросила меня.» · fb: "Never put your friend's name in a dark room."
 6. `[note|clue=ledger_page]` "The last page is yesterday's ink: 'N. Bell — voce.' A line above it: 'L. Marsh — transferred.' An older line, in different ink: 'Wren — taken.'" — «Последняя страница — вчерашние чернила: «Н. Белл — голос». Строкой выше: «Л. Марш — переведена». Старая строка, другими чернилами: «Рен — забрана».»
-7. `[Quill]` "If the name is written down, the bell will find the voice." — «Если имя записано — колокол найдёт голос.»
-8. `[task|quiz]` Choose the correct sentence:
+7. `[Nora]` "Wren was taken. Lena was transferred. I am the voice." — «Рен забрали. Лену «перевели». А я — голос.»
+8. `[Quill]` "If the name is written down, the bell will find the voice." — «Если имя записано — колокол найдёт голос.»
+9. `[task|quiz]` Choose the correct sentence:
    - "If the gate opens, we will run." ✓
    - "If the gate will open, we run."
    - "If gate opens, we will run."
-9. `[task|order]` "if the bell rings , do not answer ."
-10. `[task|tf]` True or False?
+10. `[task|order]` "if the bell rings , do not answer ."
+11. `[task|tf]` True or False?
     - "The ledger has your name in it." — true
     - "Mr. Quill is happy to see you." — false
-11. `[vocab]` archive — архив; ledger — книга записей; shelf — полка; aloud — вслух; missing — пропавший; ink — чернила.
+12. `[vocab]` archive — архив; ledger — книга записей; shelf — полка; aloud — вслух; missing — пропавший; ink — чернила.
 
 ### Chapter 7 — The Thirteenth Step
 *Objective:* Follow the cat into the tower — and stay silent. / *Иди за котом в башню — и молчи.*
@@ -281,7 +284,7 @@
 3. `[nar]` "By a hook on the wall hangs a child's coat, tiny against the stone. A name is sewn inside: Wren." — «На крюке у стены висит детское пальто — крошечное на фоне камня. Внутри вшито имя: Рен.»
 4. `[note|clue=cat_tag]` "Ash lets you read his tag at last: 'Wren'. The letters are worn almost smooth. He has waited a long time." — «Эш наконец-то позволяет прочитать свою бирку: «Рен». Буквы стёрлись почти до блеска. Он долго ждал.»
 5. `[Nora]` "You have waited here a long time, haven't you?" — «Ты ждёшь здесь очень давно, правда?»
-6. `[nar|cast=Visitor]` "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move." — «Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается.» (силуэт Visitor справа; исчезает после верного выбора — dropChars)
+6. `[nar|cast=Visitor]` "Below, a door creaks open in the dark hall. Someone is standing at the bottom of the stairs. The figure does not move. A thin white line crosses the bottom step. The figure stops at it." — «Внизу в тёмном холле скрипит дверь. Кто-то стоит у подножия лестницы. Фигура не двигается. Тонкая белая полоса тянется по нижней ступени. Фигура останавливается перед ней.» (силуэт Visitor справа; исчезает после верного выбора — dropChars)
 7. `[choice|Ash]` (Silence. The cat's ears turn. What do you do?)
    - ✓ "Hold your breath and stay still." — «Затаись и не двигайся.» · fb: "The best choices in this school are usually the quietest."
    - ✗ "Call out: 'Who is there?'" — «Крикни: «Кто там?»» · fb: "You called. Something heard you. Rule Two remembers."
@@ -301,22 +304,24 @@
 1. `[nar]` "June waits at the tower door with a candle and Lena’s key. Behind her stands Mr. Crane with his lantern. He looks ten years older." — «Джун ждёт у двери башни со свечой и ключом Лены. За ней — мистер Крейн с фонарём. Он выглядит на десять лет старше.»
 2. `[Crane]` "Vale is coming. The Long Bell is at three. She will read the names aloud, and the bell will answer." — «Скоро придёт Вейл. Долгий Колокол — в три. Она прочтёт имена вслух, и колокол ответит.»
 3. `[June]` "Lena's name is in that book. And yours is next, Nora." — «Имя Лены в той книге. А твоё — следующее, Нора.»
-4. `[Crane]` "There is one way. Break the bell, burn the old page — but the debt looks for a keeper. Someone must stay. And the bell will take his voice." — «Есть один способ. Разбей колокол, сожги старую страницу — но долг ищет хранителя. Кто-то должен остаться. И колокол заберёт его голос.»
-5. `[choice|Crane]` "When it calls your name, girl — what will you say?"
+4. `[June]` "Lena cut the rope. The bell rang anyway." — «Лена перерезала верёвку. Колокол всё равно звонил.»
+5. `[Crane]` "There is one way. Burn the page from the ledger — but the debt looks for a keeper. Someone must stay. And the bell will take his voice." — «Есть один способ. Сожги страницу книги записей — но долг ищет хранителя. Кто-то должен остаться. И колокол заберёт его голос.»
+6. `[Crane]` "Wren was my daughter. The bell took her voice, and the guest took Wren herself. It will not take another." — «Рен была моей дочерью. Колокол забрал её голос, а гость забрал саму Рен. Больше он не заберёт никого.»
+7. `[choice|Crane]` "When it calls your name, girl — what will you say?"
    - ✓ "I will say: 'You have no right to my voice. My name is mine.'" — «Я скажу: «У тебя нет права на мой голос. Моё имя — моё.»» · fb: "Crane closes his eyes. 'Strong words. Say them exactly.'"
    - ✗ "I will say nothing and hide." — «Я ничего не скажу и спрячусь.» · fb: "Then it will look for your voice in the rooms of everyone who loves you."
    - ✗ "I will run to the ferry." — «Я побегу к парому.» · fb: "The road is under water until spring. And it is faster than you."
-6. `{ bg: bell chamber }` `[nar]` "Three o'clock. The bell swings by itself. Twelve slow strokes. Then the thirteenth stroke does not ring — it speaks. And the voice has your name inside it." — «Три часа. Колокол качается сам. Двенадцать медленных ударов. Тринадцатый удар не звенит — он говорит. И в голосе — твоё имя.»
-7. `[task|multi]` Choose three clues that prove the bell is taking students:
+8. `{ bg: bell chamber }` `[nar]` "Three o'clock. The bell swings by itself. Twelve slow strokes. Then the thirteenth stroke does not ring — it speaks. And the voice has your name inside it." — «Три часа. Колокол качается сам. Двенадцать медленных ударов. Тринадцатый удар не звенит — он говорит. И в голосе — твоё имя.»
+9. `[task|multi]` Choose three clues that prove the bell is taking students:
    - diary_page ✓ ("They count us")
    - tally_marks ✓
    - ledger_page ✓
    - salt_pouch / photo / cat_tag — distractors
-8. `[task|order]` "Vale wrote my name in the old ledger ."
-9. `[task|quiz]` "If the bell rings thirteen times, ___." — "the gate will open" ✓ / "the gate opens tomorrow" / "the gate would open yesterday"
-10. `[nar]` "Nora says the words. Crane puts the old page into his lantern. The flame eats the ink — and the bell cracks, once, like ice. The cold breaks. In the sudden quiet, June is crying and laughing at the same time." — «Нора произносит слова. Крейн опускает старую страницу в фонарь. Пламя съедает чернила — и колокол трескается, один раз, как лёд. Холод отступает. В наступившей тишине Джун плачет и смеётся одновременно.»
-11. `[nar]` "Mr. Crane does not speak. He only bows his head — the bow of a man who has finally paid." — «Мистер Крейн не говорит. Он лишь склоняет голову — поклон человека, который наконец заплатил.»
-12. `[vocab]` debt — долг; keeper — хранитель; burn — сжечь; right — право; own — собственный; voice — голос.
+10. `[task|order]` "Vale wrote my name in the old ledger ."
+11. `[task|quiz]` "If the bell rings thirteen times, ___." — "the gate will open" ✓ / "the gate opens tomorrow" / "the gate would open yesterday"
+12. `[nar]` "Nora says the words. Crane puts the old page into his lantern. The flame eats the ink — and the bell cracks, once, like ice. The cold breaks. In the sudden quiet, June is crying and laughing at the same time." — «Нора произносит слова. Крейн опускает старую страницу в фонарь. Пламя съедает чернила — и колокол трескается, один раз, как лёд. Холод отступает. В наступившей тишине Джун плачет и смеётся одновременно.»
+13. `[nar]` "Mr. Crane does not speak. He only bows his head — the bow of a man who has finally paid." — «Мистер Крейн не говорит. Он лишь склоняет голову — поклон человека, который наконец заплатил.»
+14. `[vocab]` debt — долг; keeper — хранитель; burn — сжечь; right — право; own — собственный; voice — голос.
 
 ### Epilogue — Spring Ferry
 *Objective:* Say goodbye — and understand what stayed behind. / *Попрощайся — и пойми, что осталось позади.*
@@ -331,7 +336,7 @@
    - "The bell has not rung since that night." ✓
    - "The bell did not rang since that night."
    - "The bell is not ringing yesterday."
-6. `[nar]` "Ash rides on your suitcase like a captain. There’s an old tag on his collar that says “Wren.” Wherever you go, he will be with you." — «Эш едет на твоём чемодане, как капитан. На его ошейнике старая бирка с надписью «Рен». Куда бы ты ни поехала — он будет с тобой.» 
+6. `[nar]` "Ash rides on your suitcase like a captain. There’s an old tag on his collar that says “Wren.” Wherever you go, he will be with you." — «Эш едет на твоём чемодане, как капитан. На его ошейнике старая бирка с надписью «Рен». Куда бы ты ни поехала — он будет с тобой. Он ждал одну девочку. Провожает — другую.» 
 7. `[nar]` "Months later, an envelope arrives with no stamp. Inside is one line: 'The bell remembers.'" — «Спустя месяцы приходит конверт без марки. Внутри одна строка: «Колокол помнит».»
 8. `[vocab]` dawn — рассвет; melting — тающий; horn — гудок; wave — махать; enough — достаточно; remembers — помнит.
 
@@ -388,19 +393,9 @@
 - Проверка соответствия уровню: все реплики ≤ 12 слов, времена — только из карты; фидбэки учат ровно одну ошибку за раз.
 - Порядок производства: story.js → тестовый прогон на движке (заглушки картинок) → арт-промпты → финальные фоны/спрайты → музыка → вычитка.
 
-## 9. Правки в игре после согласования
+## 9. Журнал правок
 
-Девять однострочных вставок, которые связывают сюжет воедино (тексты выверены и готовы к переносу в `story.js`):
-
-1. **Гл.2, Джун** (после «Where has she gone?»): «She left in winter. Nobody leaves in winter.» — «Она исчезла зимой. Зимой отсюда не уезжают.»
-2. **Гл.5, Пула** (после мешочка): «Salt at the door, salt on the stairs. The guest never crosses it.» — «Соль у двери, соль на лестнице. Гость её не переступит.»
-3. **Гл.5, Пула** (фидбек верного ответа): «The bell keeps the voices. The guest keeps the rest.» — «Колокол оставляет себе голоса. Гость — всё остальное.»
-4. **Гл.6, Нора** (после записи в книге): «Wren was taken. Lena was transferred. I am the voice.» — «Рен забрали. Лену „перевели“. А я — голос.»
-5. **Гл.7, нарратив у фигуры**: «A thin white line crosses the bottom step. The figure stops at it.» — «Тонкая белая полоса тянется по нижней ступени. Фигура останавливается перед ней.»
-6. **Гл.8, первая строка**: «...with a candle and Lena's key.» — «...со свечой и ключом Лены.» (вместо «a stolen key»: ключ из Гл.4 получает пейофф).
-7. **Гл.8, Джун** (перед планом Крейна): «Lena cut the rope. The bell rang anyway.» — «Лена перерезала верёвку. Колокол всё равно звонил.»
-8. **Гл.8, Крейн** (перед выбором): «Wren was my daughter. The bell took her for a voice. It will not take another.» — «Рен была моей дочерью. Колокол забрал её голос. Больше он не заберёт никого.»
-9. **Эпилог, об Эше**: «He waited for one girl. He walks with another.» — «Он ждал одну девочку. Провожает — другую.»
+Все уточняющие реплики (соль, «голос / ученик», «А я — голос», соляная полоса, ключ Лены, верёвка, дочь Крейна, Эш) и правки формулировок внесены в сцены §5 и в игру (`story.js`). Читаемая версия всего русского текста — `story-ru.md`.
 
 ---
 

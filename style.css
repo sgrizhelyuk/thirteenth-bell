@@ -211,6 +211,15 @@ html, body {
   transform: translate(-50%, -50%) scale(1);
 }
 
+#chapterCard .cc-obj {
+  margin-top: 12px;
+  font-size: clamp(14px, 1.5vw, 20px);
+  color: #cfc4aa;
+  font-style: italic;
+  line-height: 1.45;
+  max-width: 64ch;
+}
+
 /* ---------------- sprites ---------------- */
 
 #sprites {
